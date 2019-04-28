@@ -4,63 +4,219 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "step[0]",
+					"name" : "oVGA_R[0]",
 					"strict" : false
 				},
 				{
-					"name" : "step[1]",
+					"name" : "oVGA_R[1]",
 					"strict" : false
 				},
 				{
-					"name" : "step[2]",
+					"name" : "oVGA_R[2]",
 					"strict" : false
 				},
 				{
-					"name" : "step[3]",
+					"name" : "oVGA_R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "cuadrante[0]",
+					"name" : "oVGA_R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cuadrante[1]",
+					"name" : "oVGA_R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "done",
+					"name" : "oVGA_R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "randReady",
+					"name" : "oVGA_R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "start",
+					"name" : "oVGA_G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "oVGA_G[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "oVGA_G[2]",
 					"strict" : false
 				},
 				{
-					"name" : "boton",
+					"name" : "oVGA_G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "select",
+					"name" : "oVGA_G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "win",
+					"name" : "oVGA_G[5]",
 					"strict" : false
 				},
 				{
-					"name" : "finish",
+					"name" : "oVGA_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_H_SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_V_SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "oVGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "iCLK",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iRST_N",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[6]",
+					"strict" : false
+				},
+				{
+					"name" : "iRed[7]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[6]",
+					"strict" : false
+				},
+				{
+					"name" : "iGreen[7]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[6]",
+					"strict" : false
+				},
+				{
+					"name" : "iBlue[7]",
 					"strict" : false
 				}
 			]

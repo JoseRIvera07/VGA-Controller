@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Apr 28 11:57:54 2019
+Analysis & Synthesis Status : Successful - Sun Apr 28 14:51:58 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Laboratorio5
-Top-level Entity Name : FSM
+Top-level Entity Name : VGA_Controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 9
-Total pins : 15
+Total registers : 49
+Total pins : 55
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
