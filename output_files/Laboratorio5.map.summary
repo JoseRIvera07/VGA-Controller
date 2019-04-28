@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Apr 28 14:51:58 2019
+Analysis & Synthesis Status : Successful - Sun Apr 28 16:42:34 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Laboratorio5
-Top-level Entity Name : VGA_Controller
+Top-level Entity Name : mux_cuadrante
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 49
-Total pins : 55
+Total registers : 0
+Total pins : 10
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

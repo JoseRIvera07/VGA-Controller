@@ -1,0 +1,20 @@
+module mux_RGB  ( 
+    input logic [23:0] hline,vline,sprite,msg,slc
+	 input [4:0] selector,
+	 output  logic [23:0] mux_out
+);
+
+always_comb
+begin
+	case (selector)
+		4'b00001:  mux_out = hline;
+		4'b00010: mux_out = vline;
+		4'b00011: mux_out = sprite;
+		4'b00100: mux_out = msg;
+		4'b00100: mux_out = slc;
+		default:  mux_out = 0;
+		
+	endcase
+
+end
+endmodule

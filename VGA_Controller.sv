@@ -15,12 +15,13 @@ module VGA_Controller(
 
 	//	Control Signal
 	input logic iCLK,
-	input logic iRST_N
+	input logic iRST_N,
+	output logic	[9:0] H_Cont,
+   output logic	[9:0] V_Cont
 );
 
 	//640 x 480 60 Hz
-
-	parameter	H_SYNC_CYC	=	95;         //Peli
+	parameter	H_SYNC_CYC	=	95;      
 	parameter	H_SYNC_BACK	=	47;
 	parameter	H_SYNC_ACT	=	635;
 	parameter	H_SYNC_FRONT=	15;
@@ -47,15 +48,8 @@ module VGA_Controller(
   logic	mVGA_BLANK;
 
   //	Internal Registers and Wires
-  logic	[9:0] H_Cont;
-  logic	[9:0] V_Cont;
-
-  logic	[12:0] v_mask;
-
-  //assign v_mask = 13'd0 ;//iZOOM_MODE_SW ? 13'd0 : 13'd26;
-
-  assign oVGA_CLK = ~iCLK;
-
+ 
+  assign oVGA_CLK = iCLK;
 
 
   ////////////////////////////////////////////////////////
@@ -79,7 +73,7 @@ module VGA_Controller(
 				begin
 					oVGA_R <= 0;
 					oVGA_G <= 0;
-	        oVGA_B <= 0;
+					oVGA_B <= 0;
 					oVGA_BLANK <= 0;
 					oVGA_SYNC <= 0;
 					oVGA_H_SYNC <= 0;
@@ -89,7 +83,7 @@ module VGA_Controller(
 				begin
 					oVGA_R <= mVGA_R;
 					oVGA_G <= mVGA_G;
-	        oVGA_B <= mVGA_B;
+					oVGA_B <= mVGA_B;
 					oVGA_BLANK <= mVGA_BLANK;
 					oVGA_SYNC <= mVGA_SYNC;
 					oVGA_H_SYNC <= mVGA_H_SYNC;
@@ -97,9 +91,9 @@ module VGA_Controller(
 				end
 		end
 
-	//	H_Sync Generator, Ref. 40 MHz Clock
+	//	H_Sync Generator
 	always@(posedge iCLK)
-	begin
+	begin	
 		if(!iRST_N)
 		begin
 			H_Cont		<=	0;
@@ -120,7 +114,7 @@ module VGA_Controller(
 		end
 	end
 
-	//	V_Sync Generator, Ref. H_Sync
+	//	V_Sync Generator
 	always@(posedge iCLK or negedge iRST_N)
 	begin
 		if(!iRST_N)
@@ -148,3 +142,4 @@ module VGA_Controller(
 	end
 
 endmodule
+
