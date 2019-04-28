@@ -1,0 +1,98 @@
+module FSM (
+	input clk,rst,start,boton,select,win,randReady,done,finish,
+	input [1:0] random,
+	output [3:0] step,
+	output [1:0] cuadrante
+);
+logic [3:0] next_state;
+logic [3:0] state;
+logic [1:0] cuadrantetemp;
+
+always_ff @(posedge clk, posedge rst) begin
+	if(rst) begin
+		state<= 4'b0000;
+		end
+	else begin
+		state <= next_state;
+		end
+end
+
+//combinational logic
+always_comb begin
+	case(state)
+	4'b0000: begin
+	if(start) 
+		next_state = 4'b0001;
+		cuadrantetemp = 2'bxx;
+	end
+	4'b0001:begin
+	if(randReady && done) 
+		next_state = 4'b0011;
+		cuadrantetemp = random;
+	else if(randReady)
+		next_state = 4'b0010;
+		cuadrantetemp = random;
+	end
+	4'b0010:begin
+	if(done) 
+		next_state = 4'b0001;
+		cuadrantetemp = 2'bxx;
+	else if(select)
+		next_state = 4'b0111;
+	end
+	4'b0011:begin
+	if(boton) 
+		next_state = 4'b0100;
+	else if(select)
+		next_state = 4'b0010;
+		cuadrantetemp = 2'b00;//cuadrante #1
+	end
+	4'b0100:begin
+	if(boton) 
+		next_state = 4'b0101;
+	else if(select)
+		next_state = 4'b0010;
+		cuadrantetemp = 2'b01;//cuadrante #2
+	end
+	4'b0101:begin
+	if(boton) 
+		next_state = 4'b0110;
+	else if(select)
+		next_state = 4'b0010;
+		cuadrantetemp = 2'b10;//cuadrante #3
+	end
+	4'b0110:begin
+	if(boton) 
+		next_state = 4'b0011;
+	else if(select)
+		next_state = 4'b0010;
+		cuadrantetemp = 2'b11;//cuadrante #3
+	end
+	4'b0111:begin
+	if(finish) 
+		next_state = 4'b0000;
+	else if(win)
+		next_state = 4'b1000;
+		cuadrantetemp = 2'bxx;
+	end
+	4'b0111:begin
+	if(finish) 
+		next_state = 4'b0000;
+	else if(win)
+		next_state = 4'b1000;
+		cuadrantetemp = 2'bxx;
+	end
+	4'b1000:begin
+	if(finish) 
+		next_state = 4'b0000;
+	//else next_state = 4'b1000;
+	end
+	default: begin
+		next_state = 4'b0000;
+		cuadrantetemp = 2'bxx;
+	end
+	
+end
+assign step = state;
+assign cuadrante = cuadrantetemp;
+endmodule

@@ -1,0 +1,37 @@
+|FSM
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+start => Selector1.IN3
+start => Selector0.IN1
+boton => next_state.OUTPUTSELECT
+boton => next_state.OUTPUTSELECT
+boton => Selector4.IN3
+boton => Selector5.IN3
+boton => Selector6.IN3
+boton => Selector3.IN4
+select => next_state.DATAA
+select => next_state.DATAA
+select => next_state.DATAA
+select => next_state.DATAA
+win => next_state.DATAA
+win => next_state.DATAA
+randReady => always1.IN0
+randReady => always1.IN0
+done => always1.IN1
+done => next_state.OUTPUTSELECT
+done => next_state.OUTPUTSELECT
+done => Selector1.IN4
+done => always1.IN1
+finish => next_state.OUTPUTSELECT
+finish => next_state.OUTPUTSELECT
+finish => Selector0.IN3
+finish => Selector0.IN4
+finish => Selector8.IN2
+step[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+step[1] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+step[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+step[3] <= step[3].DB_MAX_OUTPUT_PORT_TYPE
+cuadrante[0] <= cuadrante.DB_MAX_OUTPUT_PORT_TYPE
+cuadrante[1] <= cuadrante.DB_MAX_OUTPUT_PORT_TYPE
+
+
