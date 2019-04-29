@@ -1,0 +1,18 @@
+module hlineGenerator (
+	input win,
+	input [9:0] pixel_x,pixel_y,
+	output hline_on,
+	output [23:0] hline
+);
+
+reg [23:0] color = 24'b111111111111111111111111  
+always_comb begin
+	if(win) hline<=0;
+	else begin
+		if(pixel_x<=320 && pixel_x>=316 && pixel_y==0 && pixel_y<=525) hline<=color;
+		else hline<=0;
+	
+	end
+
+end
+endmodule

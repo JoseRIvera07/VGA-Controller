@@ -21,17 +21,33 @@ module VGA_Controller(
 );
 
 	//640 x 480 60 Hz
+	/*
+	// Horizontal Parameter
 	parameter	H_SYNC_CYC	=	95;      
 	parameter	H_SYNC_BACK	=	47;
 	parameter	H_SYNC_ACT	=	635;
 	parameter	H_SYNC_FRONT=	15;
 	parameter	H_SYNC_TOTAL=	792;
-	//	Virtical Parameter		( Line )
+	//	Vertical Parameter		( Line )
 	parameter	V_SYNC_CYC	=	2;
 	parameter	V_SYNC_BACK	=	33;
 	parameter	V_SYNC_ACT	=	480;
 	parameter	V_SYNC_FRONT=	10;
 	parameter	V_SYNC_TOTAL=	525;
+	*/
+		// Horizontal Parameter
+
+	parameter	H_SYNC_CYC	=	95;         
+	parameter	H_SYNC_BACK	=	45;
+	parameter	H_SYNC_ACT	=	640;
+	parameter	H_SYNC_FRONT=	20;
+	parameter	H_SYNC_TOTAL=	800;
+	//	Virtical Parameter	
+	parameter	V_SYNC_CYC	=	2;
+	parameter	V_SYNC_BACK	=	32;
+	parameter	V_SYNC_ACT	=	480;
+	parameter	V_SYNC_FRONT=	14;
+	parameter	V_SYNC_TOTAL=	528;
 
   //	Start Offset
   parameter	X_START		=	H_SYNC_CYC+H_SYNC_BACK;

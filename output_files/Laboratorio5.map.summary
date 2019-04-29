@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Apr 28 16:42:34 2019
+Analysis & Synthesis Status : Successful - Sun Apr 28 23:27:01 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Laboratorio5
-Top-level Entity Name : mux_cuadrante
+Top-level Entity Name : hlineGenerator
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 10
+Total pins : 46
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

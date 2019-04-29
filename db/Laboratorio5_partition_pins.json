@@ -4,43 +4,183 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "mux_out[0]",
+					"name" : "hline[0]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_out[1]",
+					"name" : "hline[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cuadranteRandom[0]",
+					"name" : "hline[2]",
 					"strict" : false
 				},
 				{
-					"name" : "state[0]",
+					"name" : "hline[3]",
 					"strict" : false
 				},
 				{
-					"name" : "state[1]",
+					"name" : "hline[4]",
 					"strict" : false
 				},
 				{
-					"name" : "state[2]",
+					"name" : "hline[5]",
 					"strict" : false
 				},
 				{
-					"name" : "state[3]",
+					"name" : "hline[6]",
 					"strict" : false
 				},
 				{
-					"name" : "cuadranteFSM[0]",
+					"name" : "hline[7]",
 					"strict" : false
 				},
 				{
-					"name" : "cuadranteRandom[1]",
+					"name" : "hline[8]",
 					"strict" : false
 				},
 				{
-					"name" : "cuadranteFSM[1]",
+					"name" : "hline[9]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[10]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[11]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[12]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[13]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[14]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[15]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[16]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[17]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[18]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[19]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[20]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[21]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[22]",
+					"strict" : false
+				},
+				{
+					"name" : "hline[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "win",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_x[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pixel_y[9]",
 					"strict" : false
 				}
 			]
