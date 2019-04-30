@@ -21,33 +21,33 @@ module VGA_Controller(
 );
 
 	//640 x 480 60 Hz
-	/*
+	
 	// Horizontal Parameter
 	parameter	H_SYNC_CYC	=	95;      
-	parameter	H_SYNC_BACK	=	47;
-	parameter	H_SYNC_ACT	=	635;
-	parameter	H_SYNC_FRONT=	15;
-	parameter	H_SYNC_TOTAL=	792;
-	//	Vertical Parameter		( Line )
-	parameter	V_SYNC_CYC	=	2;
-	parameter	V_SYNC_BACK	=	33;
-	parameter	V_SYNC_ACT	=	480;
-	parameter	V_SYNC_FRONT=	10;
-	parameter	V_SYNC_TOTAL=	525;
-	*/
-		// Horizontal Parameter
-
-	parameter	H_SYNC_CYC	=	95;         
 	parameter	H_SYNC_BACK	=	45;
 	parameter	H_SYNC_ACT	=	640;
-	parameter	H_SYNC_FRONT=	20;
-	parameter	H_SYNC_TOTAL=	800;
-	//	Virtical Parameter	
+	parameter	H_SYNC_FRONT=	15;
+	parameter	H_SYNC_TOTAL=	795;
+	//	Vertical Parameter		( Line )
 	parameter	V_SYNC_CYC	=	2;
 	parameter	V_SYNC_BACK	=	32;
 	parameter	V_SYNC_ACT	=	480;
 	parameter	V_SYNC_FRONT=	14;
 	parameter	V_SYNC_TOTAL=	528;
+	
+//		// Horizontal Parameter
+//
+//	parameter	H_SYNC_CYC	=	95;         
+//	parameter	H_SYNC_BACK	=	45;
+//	parameter	H_SYNC_ACT	=	640;
+//	parameter	H_SYNC_FRONT=	20;
+//	parameter	H_SYNC_TOTAL=	800;
+//	//	Virtical Parameter	
+//	parameter	V_SYNC_CYC	=	2;
+//	parameter	V_SYNC_BACK	=	32;
+//	parameter	V_SYNC_ACT	=	480;
+//	parameter	V_SYNC_FRONT=	14;
+//	parameter	V_SYNC_TOTAL=	528;
 
   //	Start Offset
   parameter	X_START		=	H_SYNC_CYC+H_SYNC_BACK;
@@ -63,6 +63,7 @@ module VGA_Controller(
   logic	mVGA_SYNC;
   logic	mVGA_BLANK;
 
+
   //	Internal Registers and Wires
  
   assign oVGA_CLK = iCLK;
@@ -75,17 +76,17 @@ module VGA_Controller(
 
   assign	mVGA_R	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
   						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
-  						?	iRed	:	0;
+  						?	iRed	:0;
   assign	mVGA_G	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
   						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
-  						?	iGreen	:	0;
+  						?	iGreen	:0;
   assign	mVGA_B	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
   						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
-  						?	iBlue	:	0;
+  						?	iBlue	:0;
 
-	always@(posedge iCLK or negedge iRST_N)
+	always@(posedge iCLK or posedge iRST_N)
 		begin
-			if (!iRST_N)
+			if (iRST_N)
 				begin
 					oVGA_R <= 0;
 					oVGA_G <= 0;
@@ -110,7 +111,7 @@ module VGA_Controller(
 	//	H_Sync Generator
 	always@(posedge iCLK)
 	begin	
-		if(!iRST_N)
+		if(iRST_N)
 		begin
 			H_Cont		<=	0;
 			mVGA_H_SYNC	<=	0;
@@ -131,9 +132,9 @@ module VGA_Controller(
 	end
 
 	//	V_Sync Generator
-	always@(posedge iCLK or negedge iRST_N)
+	always@(posedge iCLK or posedge iRST_N)
 	begin
-		if(!iRST_N)
+		if(iRST_N)
 		begin
 			V_Cont		<=	0;
 			mVGA_V_SYNC	<=	0;

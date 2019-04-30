@@ -10,6 +10,6 @@ begin
 	else if(sprite_on) seleccion<=3'b010;
 	else if(msg_on) seleccion<=3'b011;
 	else if(slc_on) seleccion<=3'b100;
-	else seleccion<=3'bxxx;
+	else seleccion<=3'b101;
 end
 endmodule

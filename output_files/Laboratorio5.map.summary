@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Apr 28 23:27:01 2019
+Analysis & Synthesis Status : Successful - Tue Apr 30 12:16:52 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Laboratorio5
-Top-level Entity Name : hlineGenerator
+Top-level Entity Name : top_test
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 46
+Total registers : 72
+Total pins : 40
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -1,0 +1,25 @@
+module top_test(
+	input clk,
+	output logic [7:0] oVGA_R,
+	output logic [7:0] oVGA_G,
+	output logic [7:0] oVGA_B,
+	output logic oVGA_H_SYNC,
+	output logic oVGA_V_SYNC,
+	output logic oVGA_SYNC,
+	output logic oVGA_BLANK,
+	output logic oVGA_CLK
+);
+
+logic [9:0] pixel_x;
+logic [9:0] pixel_y;
+logic clk25;
+logic rst=0;
+logic win=0;
+logic hline_on;
+logic [23:0] hline;
+
+clk_div nclk(clk,clk25);
+VGA_Controller controller(hline[7:0],hline[15:8],hline[23:16],oVGA_R,oVGA_G,oVGA_B,oVGA_H_SYNC,oVGA_V_SYNC,oVGA_SYNC,oVGA_BLANK,oVGA_CLK,clk25,rst,pixel_x,pixel_y);
+hlineGenerator generator(win,pixel_x,pixel_y,hline_on,hline);
+
+endmodule

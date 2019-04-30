@@ -1,0 +1,19 @@
+module mux_clk (
+	input clk, clk_boton,
+	input [3:0] step
+	output Nclk
+);
+
+always_comb
+begin
+	case (step)
+		3'b011:  Nclk = clk_boton;
+		3'b100:  Nclk = clk_boton;
+		3'b101:  Nclk = clk_boton;
+		3'b110:  Nclk = clk_boton;
+		default:  Nclk = clk;
+		
+	endcase
+
+end
+endmodule

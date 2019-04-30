@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk_div:nclk|clk25'
+Slack : -9.022
+TNS   : -174.763
+
+Type  : Slow 1100mV 85C Model Setup 'boton'
+Slack : -6.447
+TNS   : -19.317
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -4.619
+TNS   : -23.868
+
+Type  : Slow 1100mV 85C Model Hold 'boton'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk_div:nclk|clk25'
+Slack : 0.755
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.877
+TNS   : -11.427
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_div:nclk|clk25'
+Slack : -0.394
+TNS   : -33.701
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'boton'
+Slack : -0.394
+TNS   : -1.640
+
+Type  : Slow 1100mV 0C Model Setup 'clk_div:nclk|clk25'
+Slack : -8.920
+TNS   : -172.788
+
+Type  : Slow 1100mV 0C Model Setup 'boton'
+Slack : -6.237
+TNS   : -18.521
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -4.519
+TNS   : -24.516
+
+Type  : Slow 1100mV 0C Model Hold 'boton'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk_div:nclk|clk25'
+Slack : 0.739
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.889
+TNS   : -12.478
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_div:nclk|clk25'
+Slack : -0.394
+TNS   : -33.160
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'boton'
+Slack : -0.394
+TNS   : -1.629
+
+Type  : Fast 1100mV 85C Model Setup 'clk_div:nclk|clk25'
+Slack : -5.286
+TNS   : -83.134
+
+Type  : Fast 1100mV 85C Model Setup 'boton'
+Slack : -4.131
+TNS   : -12.364
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -3.554
+TNS   : -8.606
+
+Type  : Fast 1100mV 85C Model Hold 'boton'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk_div:nclk|clk25'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.765
+TNS   : -2.738
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'boton'
+Slack : -0.308
+TNS   : -1.120
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_div:nclk|clk25'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk_div:nclk|clk25'
+Slack : -5.131
+TNS   : -73.620
+
+Type  : Fast 1100mV 0C Model Setup 'boton'
+Slack : -3.443
+TNS   : -10.317
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -3.098
+TNS   : -7.279
+
+Type  : Fast 1100mV 0C Model Hold 'boton'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk_div:nclk|clk25'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.741
+TNS   : -2.740
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'boton'
+Slack : -0.306
+TNS   : -1.095
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_div:nclk|clk25'
+Slack : 0.122
+TNS   : 0.000
+
+------------------------------------------------------------

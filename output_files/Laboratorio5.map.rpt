@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Laboratorio5
-Sun Apr 28 23:27:01 2019
+Tue Apr 30 12:16:52 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,11 +13,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |top_test|FSM:fsm|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: VGA_Controller:controller
+ 13. Port Connectivity Checks: "VGA_Controller:controller"
+ 14. Port Connectivity Checks: "vlineGenerator:generator2"
+ 15. Port Connectivity Checks: "hlineGenerator:generator"
+ 16. Port Connectivity Checks: "mux_RGB:dut"
+ 17. Port Connectivity Checks: "selector:selectd"
+ 18. Port Connectivity Checks: "FSM:fsm"
+ 19. Port Connectivity Checks: "random:ran"
+ 20. Port Connectivity Checks: "counter:ctn"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,14 +55,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 28 23:27:01 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 30 12:16:52 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Laboratorio5                                ;
-; Top-level Entity Name           ; hlineGenerator                              ;
+; Top-level Entity Name           ; top_test                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 46                                          ;
+; Total registers                 ; 72                                          ;
+; Total pins                      ; 40                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +81,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; hlineGenerator     ; Laboratorio5       ;
+; Top-level entity name                                                           ; top_test           ; Laboratorio5       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -159,10 +171,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -171,45 +184,102 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; decodificador.vhd                ; yes             ; User VHDL File               ; C:/Users/Jose Rivera/Documents/VGA-Controller/decodificador.vhd ;         ;
+; counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv        ;         ;
+; Comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/Comparator.sv     ;         ;
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/FSM.sv            ;         ;
+; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv ;         ;
+; clk_div.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/clk_div.sv        ;         ;
+; mux_RGB.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB.sv        ;         ;
+; selector.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/selector.sv       ;         ;
 ; hlineGenerator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv ;         ;
+; vlineGenerator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv ;         ;
+; top_test.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv       ;         ;
+; random.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv         ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimate of Logic utilization (ALMs needed) ; 5       ;
-;                                             ;         ;
-; Combinational ALUT usage for logic          ; 5       ;
-;     -- 7 input functions                    ; 1       ;
-;     -- 6 input functions                    ; 3       ;
-;     -- 5 input functions                    ; 0       ;
-;     -- 4 input functions                    ; 1       ;
-;     -- <=3 input functions                  ; 0       ;
-;                                             ;         ;
-; Dedicated logic registers                   ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 46      ;
-;                                             ;         ;
-; Total DSP Blocks                            ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; hline~2 ;
-; Maximum fan-out                             ; 24      ;
-; Total fan-out                               ; 99      ;
-; Average fan-out                             ; 1.02    ;
-+---------------------------------------------+---------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 56                 ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 91                 ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 17                 ;
+;     -- 5 input functions                    ; 15                 ;
+;     -- 4 input functions                    ; 10                 ;
+;     -- <=3 input functions                  ; 49                 ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 72                 ;
+;                                             ;                    ;
+; I/O pins                                    ; 40                 ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; clk_div:nclk|clk25 ;
+; Maximum fan-out                             ; 54                 ;
+; Total fan-out                               ; 579                ;
+; Average fan-out                             ; 2.38               ;
++---------------------------------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |hlineGenerator            ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 46   ; 0            ; |hlineGenerator     ; hlineGenerator ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name    ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
+; |top_test                      ; 91 (0)              ; 72 (0)                    ; 0                 ; 0          ; 40   ; 0            ; |top_test                           ; top_test       ; work         ;
+;    |Comparator:comp|           ; 13 (13)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|Comparator:comp           ; Comparator     ; work         ;
+;    |FSM:fsm|                   ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|FSM:fsm                   ; FSM            ; work         ;
+;    |VGA_Controller:controller| ; 42 (42)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|VGA_Controller:controller ; VGA_Controller ; work         ;
+;    |clk_div:nclk|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|clk_div:nclk              ; clk_div        ; work         ;
+;    |counter:ctn|               ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|counter:ctn               ; counter        ; work         ;
+;    |decodificador:deco|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|decodificador:deco        ; decodificador  ; work         ;
+;    |hlineGenerator:generator|  ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|hlineGenerator:generator  ; hlineGenerator ; work         ;
+;    |random:ran|                ; 16 (16)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|random:ran                ; random         ; work         ;
+;    |vlineGenerator:generator2| ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|vlineGenerator:generator2 ; vlineGenerator ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------+
+; State Machine - |top_test|FSM:fsm|state                                                  ;
++------------+------------+------------+------------+------------+------------+------------+
+; Name       ; state.0011 ; state.0010 ; state.0001 ; state.0000 ; state.1000 ; state.0111 ;
++------------+------------+------------+------------+------------+------------+------------+
+; state.0000 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ;
+; state.0001 ; 0          ; 0          ; 1          ; 1          ; 0          ; 0          ;
+; state.0010 ; 0          ; 1          ; 0          ; 1          ; 0          ; 0          ;
+; state.0011 ; 1          ; 0          ; 0          ; 1          ; 0          ; 0          ;
+; state.0111 ; 0          ; 0          ; 0          ; 1          ; 0          ; 1          ;
+; state.1000 ; 0          ; 0          ; 0          ; 1          ; 1          ; 0          ;
++------------+------------+------------+------------+------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++----------------------------------------------------+--------------------------------------------+
+; Register name                                      ; Reason for Removal                         ;
++----------------------------------------------------+--------------------------------------------+
+; VGA_Controller:controller|oVGA_SYNC                ; Stuck at GND due to stuck port data_in     ;
+; vlineGenerator:generator2|vline[0..23]             ; Stuck at GND due to stuck port data_in     ;
+; hlineGenerator:generator|hline[0..23]              ; Stuck at GND due to stuck port data_in     ;
+; Comparator:comp|ocuadrante[2,4,5,10..13,16,18..22] ; Merged with Comparator:comp|ocuadrante[0]  ;
+; Comparator:comp|ocuadrante[1,3,6..9,15,17,23]      ; Merged with Comparator:comp|ocuadrante[14] ;
+; counter:ctn|seconds[2]                             ; Merged with counter:ctn|enable[2]          ;
+; counter:ctn|seconds[1]                             ; Merged with counter:ctn|enable[1]          ;
+; counter:ctn|seconds[0]                             ; Merged with counter:ctn|enable[0]          ;
+; Comparator:comp|ocuadrante[0]                      ; Stuck at GND due to stuck port data_in     ;
+; Comparator:comp|ocuadrante[14]                     ; Stuck at VCC due to stuck port data_in     ;
+; FSM:fsm|state~4                                    ; Lost fanout                                ;
+; FSM:fsm|state~5                                    ; Lost fanout                                ;
+; FSM:fsm|state.1000                                 ; Stuck at GND due to stuck port data_in     ;
+; Total Number of Removed Registers = 79             ;                                            ;
++----------------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -217,14 +287,126 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 72    ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_test|counter:ctn|enable[0]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_test|random:ran|randnumTemp[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_Controller:controller ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; H_SYNC_CYC     ; 95    ; Signed Integer                                ;
+; H_SYNC_BACK    ; 45    ; Signed Integer                                ;
+; H_SYNC_ACT     ; 640   ; Signed Integer                                ;
+; H_SYNC_FRONT   ; 15    ; Signed Integer                                ;
+; H_SYNC_TOTAL   ; 795   ; Signed Integer                                ;
+; V_SYNC_CYC     ; 2     ; Signed Integer                                ;
+; V_SYNC_BACK    ; 32    ; Signed Integer                                ;
+; V_SYNC_ACT     ; 480   ; Signed Integer                                ;
+; V_SYNC_FRONT   ; 14    ; Signed Integer                                ;
+; V_SYNC_TOTAL   ; 528   ; Signed Integer                                ;
+; X_START        ; 140   ; Signed Integer                                ;
+; Y_START        ; 34    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "VGA_Controller:controller" ;
++--------+-------+----------+---------------------------+
+; Port   ; Type  ; Severity ; Details                   ;
++--------+-------+----------+---------------------------+
+; iRST_N ; Input ; Info     ; Stuck at GND              ;
++--------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "vlineGenerator:generator2" ;
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; win  ; Input ; Info     ; Stuck at GND                ;
++------+-------+----------+-----------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "hlineGenerator:generator" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; win  ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_RGB:dut"                                                                                                                                                                               ;
++---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; sprite        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (24 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; sprite[23..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; msg           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (24 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; msg[23..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:selectd"                                                                                                                                                                          ;
++---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; sprite_on     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; sprite_on[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; msg_on        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; msg_on[-1]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FSM:fsm"      ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; rst    ; Input ; Info     ; Stuck at GND ;
+; win    ; Input ; Info     ; Stuck at GND ;
+; done   ; Input ; Info     ; Stuck at VCC ;
+; finish ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "random:ran" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; rst  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "counter:ctn" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; rst  ; Input ; Info     ; Stuck at GND  ;
++------+-------+----------+---------------+
 
 
 +-----------------------------------------------------+
@@ -232,17 +414,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 6                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 5                           ;
+; arriav_ff             ; 72                          ;
+;     ENA               ; 5                           ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 47                          ;
+; arriav_lcell_comb     ; 92                          ;
+;     arith             ; 27                          ;
+;         1 data inputs ; 27                          ;
+;     normal            ; 65                          ;
 ;         0 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;         6 data inputs ; 3                           ;
-; boundary_port         ; 46                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 17                          ;
+; boundary_port         ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.81                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.86                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,10 +452,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 28 23:26:45 2019
+    Info: Processing started: Tue Apr 30 12:16:34 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
+    Info (12022): Found design unit 1: decodificador-Behavioral File: C:/Users/Jose Rivera/Documents/VGA-Controller/decodificador.vhd Line: 13
+    Info (12023): Found entity 1: decodificador File: C:/Users/Jose Rivera/Documents/VGA-Controller/decodificador.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
+    Info (12023): Found entity 1: counter File: C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
+    Info (12023): Found entity 1: Comparator File: C:/Users/Jose Rivera/Documents/VGA-Controller/Comparator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
     Info (12023): Found entity 1: FSM File: C:/Users/Jose Rivera/Documents/VGA-Controller/FSM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
@@ -279,23 +477,55 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_cua
     Info (12023): Found entity 1: mux_cuadrante File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_cuadrante.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hlinegenerator.sv
     Info (12023): Found entity 1: hlineGenerator File: C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv Line: 1
-Info (12127): Elaborating entity "hlineGenerator" for the top level hierarchy
-Warning (10034): Output port "hline_on" at hlineGenerator.sv(4) has no driver File: C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file vlinegenerator.sv
+    Info (12023): Found entity 1: vlineGenerator File: C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top_test.sv
+    Info (12023): Found entity 1: top_test File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file test.sv
+    Info (12023): Found entity 1: test File: C:/Users/Jose Rivera/Documents/VGA-Controller/test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_clk.sv
+    Info (12023): Found entity 1: mux_clk File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_clk.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file random.sv
+    Info (12023): Found entity 1: random File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 1
+Info (12127): Elaborating entity "top_test" for the top level hierarchy
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:nclk" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 35
+Info (12128): Elaborating entity "counter" for hierarchy "counter:ctn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at counter.sv(25): truncated value with size 32 to match size of target (3) File: C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv Line: 25
+Info (12128): Elaborating entity "random" for hierarchy "random:ran" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at random.sv(27): truncated value with size 32 to match size of target (7) File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 27
+Critical Warning (10237): Verilog HDL warning at random.sv(58): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 58
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:deco" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 41
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 43
+Info (12128): Elaborating entity "selector" for hierarchy "selector:selectd" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 45
+Info (12128): Elaborating entity "mux_RGB" for hierarchy "mux_RGB:dut" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 47
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 49
+Info (12128): Elaborating entity "hlineGenerator" for hierarchy "hlineGenerator:generator" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 51
+Warning (10036): Verilog HDL or VHDL warning at hlineGenerator.sv(9): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv Line: 9
+Info (12128): Elaborating entity "vlineGenerator" for hierarchy "vlineGenerator:generator2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 53
+Warning (10036): Verilog HDL or VHDL warning at vlineGenerator.sv(9): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv Line: 9
+Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:controller" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(77): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(80): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(83): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(123): truncated value with size 32 to match size of target (10) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 123
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(149): truncated value with size 32 to match size of target (10) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 149
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "hline_on" is stuck at GND File: C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv Line: 4
+    Warning (13410): Pin "oVGA_SYNC" is stuck at GND File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 9
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Jose Rivera/Documents/VGA-Controller/output_files/Laboratorio5.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sun Apr 28 23:27:01 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:40
+Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 121 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Tue Apr 30 12:16:52 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:43
 
 
 +------------------------------------------+

@@ -1,6 +1,6 @@
 module clk_div (
     input clk,
-    output reg clk_div
+    output logic clk_div
     );
 logic clk25 = 0;
 

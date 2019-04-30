@@ -4,183 +4,159 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "hline[0]",
+					"name" : "oVGA_R[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[1]",
+					"name" : "oVGA_R[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[2]",
+					"name" : "oVGA_R[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[3]",
+					"name" : "oVGA_R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[4]",
+					"name" : "oVGA_R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[5]",
+					"name" : "oVGA_R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[6]",
+					"name" : "oVGA_R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[7]",
+					"name" : "oVGA_R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[8]",
+					"name" : "oVGA_G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[9]",
+					"name" : "oVGA_G[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[10]",
+					"name" : "oVGA_G[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[11]",
+					"name" : "oVGA_G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[12]",
+					"name" : "oVGA_G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[13]",
+					"name" : "oVGA_G[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[14]",
+					"name" : "oVGA_G[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[15]",
+					"name" : "oVGA_G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[16]",
+					"name" : "oVGA_B[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[17]",
+					"name" : "oVGA_B[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[18]",
+					"name" : "oVGA_B[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[19]",
+					"name" : "oVGA_B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[20]",
+					"name" : "oVGA_B[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[21]",
+					"name" : "oVGA_B[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[22]",
+					"name" : "oVGA_B[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hline[23]",
+					"name" : "oVGA_B[7]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[6]",
+					"name" : "oVGA_H_SYNC",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[2]",
+					"name" : "oVGA_V_SYNC",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[3]",
+					"name" : "oVGA_BLANK",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[4]",
+					"name" : "oVGA_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[5]",
+					"name" : "seveSeg[0]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[0]",
+					"name" : "seveSeg[1]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[1]",
+					"name" : "seveSeg[2]",
 					"strict" : false
 				},
 				{
-					"name" : "win",
+					"name" : "seveSeg[3]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[7]",
+					"name" : "seveSeg[4]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[8]",
+					"name" : "seveSeg[5]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_x[9]",
+					"name" : "seveSeg[6]",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_y[0]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_y[1]",
+					"name" : "select",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_y[2]",
+					"name" : "start",
 					"strict" : false
 				},
 				{
-					"name" : "pixel_y[3]",
-					"strict" : false
-				},
-				{
-					"name" : "pixel_y[4]",
-					"strict" : false
-				},
-				{
-					"name" : "pixel_y[5]",
-					"strict" : false
-				},
-				{
-					"name" : "pixel_y[6]",
-					"strict" : false
-				},
-				{
-					"name" : "pixel_y[7]",
-					"strict" : false
-				},
-				{
-					"name" : "pixel_y[8]",
-					"strict" : false
-				},
-				{
-					"name" : "pixel_y[9]",
+					"name" : "boton",
 					"strict" : false
 				}
 			]
