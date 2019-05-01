@@ -1,5 +1,5 @@
 Timing Analyzer report for Laboratorio5
-Wed May 01 00:19:43 2019
+Wed May 01 01:48:22 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,14 +99,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
+; Average used               ; 1.34        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  12.7%      ;
-;     Processor 3            ;  12.6%      ;
-;     Processor 4            ;  12.5%      ;
+;     Processor 2            ;  11.5%      ;
+;     Processor 3            ;  11.5%      ;
+;     Processor 4            ;  11.4%      ;
 +----------------------------+-------------+
 
 
@@ -122,16 +122,16 @@ refer to the applicable agreement for further details.
 +--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                                        ;
-+------------+-----------------+--------------------+-------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name         ; Note                                                  ;
-+------------+-----------------+--------------------+-------------------------------------------------------+
-; 148.24 MHz ; 148.24 MHz      ; clk_div:nclk|clk25 ;                                                       ;
-; 269.03 MHz ; 269.03 MHz      ; clk                ;                                                       ;
-; 432.34 MHz ; 432.34 MHz      ; new_clock:nw|q     ;                                                       ;
-; 710.23 MHz ; 629.72 MHz      ; boton              ; limit due to high minimum pulse width violation (tch) ;
-+------------+-----------------+--------------------+-------------------------------------------------------+
++----------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                       ;
++------------+-----------------+--------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name         ; Note ;
++------------+-----------------+--------------------+------+
+; 151.29 MHz ; 151.29 MHz      ; clk_div:nclk|clk25 ;      ;
+; 259.61 MHz ; 259.61 MHz      ; clk                ;      ;
+; 454.75 MHz ; 454.75 MHz      ; new_clock:nw|q     ;      ;
+; 628.14 MHz ; 628.14 MHz      ; boton              ;      ;
++------------+-----------------+--------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -146,10 +146,10 @@ HTML report is unavailable in plain text report export.
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk_div:nclk|clk25 ; -8.323 ; -246.320      ;
-; clk                ; -6.274 ; -208.340      ;
-; boton              ; -5.745 ; -17.029       ;
-; new_clock:nw|q     ; -3.718 ; -10.928       ;
+; clk_div:nclk|clk25 ; -8.475 ; -279.084      ;
+; clk                ; -6.436 ; -213.918      ;
+; boton              ; -5.817 ; -16.846       ;
+; new_clock:nw|q     ; -3.891 ; -21.761       ;
 +--------------------+--------+---------------+
 
 
@@ -158,10 +158,10 @@ HTML report is unavailable in plain text report export.
 +--------------------+-------+---------------+
 ; Clock              ; Slack ; End Point TNS ;
 +--------------------+-------+---------------+
-; boton              ; 0.220 ; 0.000         ;
-; clk                ; 0.373 ; 0.000         ;
-; clk_div:nclk|clk25 ; 0.376 ; 0.000         ;
-; new_clock:nw|q     ; 0.717 ; 0.000         ;
+; boton              ; 0.277 ; 0.000         ;
+; new_clock:nw|q     ; 0.357 ; 0.000         ;
+; clk                ; 0.379 ; 0.000         ;
+; clk_div:nclk|clk25 ; 0.577 ; 0.000         ;
 +--------------------+-------+---------------+
 
 
@@ -182,10 +182,10 @@ No paths to report.
 +--------------------+--------+---------------------+
 ; Clock              ; Slack  ; End Point TNS       ;
 +--------------------+--------+---------------------+
-; clk                ; -0.897 ; -58.422             ;
-; clk_div:nclk|clk25 ; -0.394 ; -36.333             ;
-; boton              ; -0.394 ; -2.059              ;
-; new_clock:nw|q     ; -0.394 ; -1.772              ;
+; clk_div:nclk|clk25 ; -2.174 ; -81.857             ;
+; clk                ; -0.852 ; -57.355             ;
+; new_clock:nw|q     ; -0.394 ; -3.195              ;
+; boton              ; -0.394 ; -1.616              ;
 +--------------------+--------+---------------------+
 
 
@@ -201,10 +201,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+--------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name         ; Note ;
 +------------+-----------------+--------------------+------+
-; 147.6 MHz  ; 147.6 MHz       ; clk_div:nclk|clk25 ;      ;
-; 258.6 MHz  ; 258.6 MHz       ; clk                ;      ;
-; 446.43 MHz ; 446.43 MHz      ; new_clock:nw|q     ;      ;
-; 712.25 MHz ; 712.25 MHz      ; boton              ;      ;
+; 148.41 MHz ; 148.41 MHz      ; clk_div:nclk|clk25 ;      ;
+; 239.01 MHz ; 239.01 MHz      ; clk                ;      ;
+; 470.81 MHz ; 470.81 MHz      ; new_clock:nw|q     ;      ;
+; 650.2 MHz  ; 650.2 MHz       ; boton              ;      ;
 +------------+-----------------+--------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -214,10 +214,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk_div:nclk|clk25 ; -8.201 ; -242.299      ;
-; clk                ; -5.963 ; -209.007      ;
-; boton              ; -5.554 ; -16.388       ;
-; new_clock:nw|q     ; -3.903 ; -11.467       ;
+; clk_div:nclk|clk25 ; -8.487 ; -273.542      ;
+; clk                ; -6.177 ; -211.003      ;
+; boton              ; -5.571 ; -16.024       ;
+; new_clock:nw|q     ; -3.969 ; -22.236       ;
 +--------------------+--------+---------------+
 
 
@@ -226,10 +226,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------+-------+---------------+
 ; Clock              ; Slack ; End Point TNS ;
 +--------------------+-------+---------------+
-; clk                ; 0.245 ; 0.000         ;
-; boton              ; 0.285 ; 0.000         ;
-; clk_div:nclk|clk25 ; 0.328 ; 0.000         ;
-; new_clock:nw|q     ; 0.723 ; 0.000         ;
+; clk                ; 0.167 ; 0.000         ;
+; new_clock:nw|q     ; 0.331 ; 0.000         ;
+; boton              ; 0.336 ; 0.000         ;
+; clk_div:nclk|clk25 ; 0.503 ; 0.000         ;
 +--------------------+-------+---------------+
 
 
@@ -250,10 +250,10 @@ No paths to report.
 +--------------------+--------+--------------------+
 ; Clock              ; Slack  ; End Point TNS      ;
 +--------------------+--------+--------------------+
-; clk                ; -0.888 ; -63.500            ;
-; clk_div:nclk|clk25 ; -0.394 ; -35.555            ;
-; new_clock:nw|q     ; -0.394 ; -1.762             ;
-; boton              ; -0.394 ; -1.624             ;
+; clk_div:nclk|clk25 ; -2.174 ; -81.010            ;
+; clk                ; -0.853 ; -62.260            ;
+; new_clock:nw|q     ; -0.394 ; -3.170             ;
+; boton              ; -0.394 ; -1.614             ;
 +--------------------+--------+--------------------+
 
 
@@ -269,10 +269,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk_div:nclk|clk25 ; -4.783 ; -133.902      ;
-; clk                ; -3.717 ; -84.709       ;
-; boton              ; -3.694 ; -10.714       ;
-; new_clock:nw|q     ; -1.752 ; -5.196        ;
+; clk_div:nclk|clk25 ; -4.849 ; -148.603      ;
+; clk                ; -3.879 ; -90.517       ;
+; boton              ; -3.653 ; -10.347       ;
+; new_clock:nw|q     ; -1.816 ; -10.426       ;
 +--------------------+--------+---------------+
 
 
@@ -281,10 +281,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------+-------+---------------+
 ; Clock              ; Slack ; End Point TNS ;
 +--------------------+-------+---------------+
-; clk_div:nclk|clk25 ; 0.059 ; 0.000         ;
-; boton              ; 0.141 ; 0.000         ;
-; clk                ; 0.182 ; 0.000         ;
-; new_clock:nw|q     ; 0.305 ; 0.000         ;
+; clk_div:nclk|clk25 ; 0.111 ; 0.000         ;
+; new_clock:nw|q     ; 0.149 ; 0.000         ;
+; boton              ; 0.157 ; 0.000         ;
+; clk                ; 0.184 ; 0.000         ;
 +--------------------+-------+---------------+
 
 
@@ -305,10 +305,10 @@ No paths to report.
 +--------------------+--------+---------------------+
 ; Clock              ; Slack  ; End Point TNS       ;
 +--------------------+--------+---------------------+
-; clk                ; -0.788 ; -10.971             ;
-; boton              ; -0.314 ; -1.139              ;
-; new_clock:nw|q     ; -0.029 ; -0.029              ;
-; clk_div:nclk|clk25 ; -0.023 ; -0.065              ;
+; clk_div:nclk|clk25 ; -2.174 ; -46.872             ;
+; clk                ; -0.741 ; -10.622             ;
+; boton              ; -0.306 ; -1.113              ;
+; new_clock:nw|q     ; 0.048  ; 0.000               ;
 +--------------------+--------+---------------------+
 
 
@@ -324,23 +324,23 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------+--------+---------------+
 ; Clock              ; Slack  ; End Point TNS ;
 +--------------------+--------+---------------+
-; clk_div:nclk|clk25 ; -4.683 ; -118.637      ;
-; clk                ; -3.548 ; -72.920       ;
-; boton              ; -3.054 ; -8.821        ;
-; new_clock:nw|q     ; -1.741 ; -5.144        ;
+; clk_div:nclk|clk25 ; -4.759 ; -132.819      ;
+; clk                ; -3.687 ; -76.676       ;
+; boton              ; -3.027 ; -8.523        ;
+; new_clock:nw|q     ; -1.766 ; -10.107       ;
 +--------------------+--------+---------------+
 
 
-+---------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary           ;
-+--------------------+--------+---------------+
-; Clock              ; Slack  ; End Point TNS ;
-+--------------------+--------+---------------+
-; clk_div:nclk|clk25 ; -0.002 ; -0.002        ;
-; clk                ; 0.147  ; 0.000         ;
-; boton              ; 0.148  ; 0.000         ;
-; new_clock:nw|q     ; 0.278  ; 0.000         ;
-+--------------------+--------+---------------+
++--------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary          ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; clk                ; 0.069 ; 0.000         ;
+; clk_div:nclk|clk25 ; 0.075 ; 0.000         ;
+; new_clock:nw|q     ; 0.124 ; 0.000         ;
+; boton              ; 0.163 ; 0.000         ;
++--------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -360,10 +360,10 @@ No paths to report.
 +--------------------+--------+--------------------+
 ; Clock              ; Slack  ; End Point TNS      ;
 +--------------------+--------+--------------------+
-; clk                ; -0.743 ; -10.983            ;
-; boton              ; -0.314 ; -1.115             ;
-; new_clock:nw|q     ; 0.010  ; 0.000              ;
-; clk_div:nclk|clk25 ; 0.013  ; 0.000              ;
+; clk_div:nclk|clk25 ; -2.174 ; -46.492            ;
+; clk                ; -0.706 ; -10.818            ;
+; boton              ; -0.301 ; -1.079             ;
+; new_clock:nw|q     ; 0.073  ; 0.000              ;
 +--------------------+--------+--------------------+
 
 
@@ -374,22 +374,22 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                ;
-+---------------------+----------+--------+----------+---------+---------------------+
-; Clock               ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack    ; -8.323   ; -0.002 ; N/A      ; N/A     ; -0.897              ;
-;  boton              ; -5.745   ; 0.141  ; N/A      ; N/A     ; -0.394              ;
-;  clk                ; -6.274   ; 0.147  ; N/A      ; N/A     ; -0.897              ;
-;  clk_div:nclk|clk25 ; -8.323   ; -0.002 ; N/A      ; N/A     ; -0.394              ;
-;  new_clock:nw|q     ; -3.903   ; 0.278  ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS     ; -482.617 ; -0.002 ; 0.0      ; 0.0     ; -102.441            ;
-;  boton              ; -17.029  ; 0.000  ; N/A      ; N/A     ; -2.059              ;
-;  clk                ; -209.007 ; 0.000  ; N/A      ; N/A     ; -63.500             ;
-;  clk_div:nclk|clk25 ; -246.320 ; -0.002 ; N/A      ; N/A     ; -36.333             ;
-;  new_clock:nw|q     ; -11.467  ; 0.000  ; N/A      ; N/A     ; -1.772              ;
-+---------------------+----------+--------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                               ;
++---------------------+----------+-------+----------+---------+---------------------+
+; Clock               ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack    ; -8.487   ; 0.069 ; N/A      ; N/A     ; -2.174              ;
+;  boton              ; -5.817   ; 0.157 ; N/A      ; N/A     ; -0.394              ;
+;  clk                ; -6.436   ; 0.069 ; N/A      ; N/A     ; -0.853              ;
+;  clk_div:nclk|clk25 ; -8.487   ; 0.075 ; N/A      ; N/A     ; -2.174              ;
+;  new_clock:nw|q     ; -3.969   ; 0.124 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS     ; -531.609 ; 0.0   ; 0.0      ; 0.0     ; -148.054            ;
+;  boton              ; -16.846  ; 0.000 ; N/A      ; N/A     ; -1.616              ;
+;  clk                ; -213.918 ; 0.000 ; N/A      ; N/A     ; -62.260             ;
+;  clk_div:nclk|clk25 ; -279.084 ; 0.000 ; N/A      ; N/A     ; -81.857             ;
+;  new_clock:nw|q     ; -22.236  ; 0.000 ; N/A      ; N/A     ; -3.195              ;
++---------------------+----------+-------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -632,15 +632,15 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; boton              ; boton              ; 0        ; 0        ; 0        ; 6        ;
 ; clk                ; boton              ; 0        ; 0        ; 15       ; 0        ;
 ; boton              ; clk                ; 0        ; 6        ; 0        ; 0        ;
-; clk                ; clk                ; 2285     ; 0        ; 0        ; 0        ;
+; clk                ; clk                ; 2215     ; 0        ; 0        ; 0        ;
 ; clk_div:nclk|clk25 ; clk                ; 1        ; 1        ; 0        ; 0        ;
-; new_clock:nw|q     ; clk                ; 4        ; 0        ; 0        ; 0        ;
+; new_clock:nw|q     ; clk                ; 6        ; 0        ; 0        ; 0        ;
 ; boton              ; clk_div:nclk|clk25 ; 0        ; 9        ; 0        ; 0        ;
-; clk                ; clk_div:nclk|clk25 ; 4679     ; 0        ; 0        ; 0        ;
-; clk_div:nclk|clk25 ; clk_div:nclk|clk25 ; 11856    ; 0        ; 0        ; 0        ;
-; new_clock:nw|q     ; clk_div:nclk|clk25 ; 32       ; 0        ; 0        ; 0        ;
-; clk                ; new_clock:nw|q     ; 12       ; 0        ; 0        ; 0        ;
-; new_clock:nw|q     ; new_clock:nw|q     ; 6        ; 0        ; 0        ; 0        ;
+; clk                ; clk_div:nclk|clk25 ; 4681     ; 0        ; 0        ; 0        ;
+; clk_div:nclk|clk25 ; clk_div:nclk|clk25 ; 12231    ; 0        ; 0        ; 0        ;
+; new_clock:nw|q     ; clk_div:nclk|clk25 ; 141      ; 0        ; 0        ; 0        ;
+; clk                ; new_clock:nw|q     ; 15       ; 0        ; 0        ; 0        ;
+; new_clock:nw|q     ; new_clock:nw|q     ; 10       ; 0        ; 0        ; 0        ;
 +--------------------+--------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -653,15 +653,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; boton              ; boton              ; 0        ; 0        ; 0        ; 6        ;
 ; clk                ; boton              ; 0        ; 0        ; 15       ; 0        ;
 ; boton              ; clk                ; 0        ; 6        ; 0        ; 0        ;
-; clk                ; clk                ; 2285     ; 0        ; 0        ; 0        ;
+; clk                ; clk                ; 2215     ; 0        ; 0        ; 0        ;
 ; clk_div:nclk|clk25 ; clk                ; 1        ; 1        ; 0        ; 0        ;
-; new_clock:nw|q     ; clk                ; 4        ; 0        ; 0        ; 0        ;
+; new_clock:nw|q     ; clk                ; 6        ; 0        ; 0        ; 0        ;
 ; boton              ; clk_div:nclk|clk25 ; 0        ; 9        ; 0        ; 0        ;
-; clk                ; clk_div:nclk|clk25 ; 4679     ; 0        ; 0        ; 0        ;
-; clk_div:nclk|clk25 ; clk_div:nclk|clk25 ; 11856    ; 0        ; 0        ; 0        ;
-; new_clock:nw|q     ; clk_div:nclk|clk25 ; 32       ; 0        ; 0        ; 0        ;
-; clk                ; new_clock:nw|q     ; 12       ; 0        ; 0        ; 0        ;
-; new_clock:nw|q     ; new_clock:nw|q     ; 6        ; 0        ; 0        ; 0        ;
+; clk                ; clk_div:nclk|clk25 ; 4681     ; 0        ; 0        ; 0        ;
+; clk_div:nclk|clk25 ; clk_div:nclk|clk25 ; 12231    ; 0        ; 0        ; 0        ;
+; new_clock:nw|q     ; clk_div:nclk|clk25 ; 141      ; 0        ; 0        ; 0        ;
+; clk                ; new_clock:nw|q     ; 15       ; 0        ; 0        ; 0        ;
+; new_clock:nw|q     ; new_clock:nw|q     ; 10       ; 0        ; 0        ; 0        ;
 +--------------------+--------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -816,7 +816,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 01 00:19:33 2019
+    Info: Processing started: Wed May 01 01:48:12 2019
 Info: Command: quartus_sta Laboratorio5 -c Laboratorio5
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -836,29 +836,29 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.323
+Info (332146): Worst-case setup slack is -8.475
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.323            -246.320 clk_div:nclk|clk25 
-    Info (332119):    -6.274            -208.340 clk 
-    Info (332119):    -5.745             -17.029 boton 
-    Info (332119):    -3.718             -10.928 new_clock:nw|q 
-Info (332146): Worst-case hold slack is 0.220
+    Info (332119):    -8.475            -279.084 clk_div:nclk|clk25 
+    Info (332119):    -6.436            -213.918 clk 
+    Info (332119):    -5.817             -16.846 boton 
+    Info (332119):    -3.891             -21.761 new_clock:nw|q 
+Info (332146): Worst-case hold slack is 0.277
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.220               0.000 boton 
-    Info (332119):     0.373               0.000 clk 
-    Info (332119):     0.376               0.000 clk_div:nclk|clk25 
-    Info (332119):     0.717               0.000 new_clock:nw|q 
+    Info (332119):     0.277               0.000 boton 
+    Info (332119):     0.357               0.000 new_clock:nw|q 
+    Info (332119):     0.379               0.000 clk 
+    Info (332119):     0.577               0.000 clk_div:nclk|clk25 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.897
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.897             -58.422 clk 
-    Info (332119):    -0.394             -36.333 clk_div:nclk|clk25 
-    Info (332119):    -0.394              -2.059 boton 
-    Info (332119):    -0.394              -1.772 new_clock:nw|q 
+    Info (332119):    -2.174             -81.857 clk_div:nclk|clk25 
+    Info (332119):    -0.852             -57.355 clk 
+    Info (332119):    -0.394              -3.195 new_clock:nw|q 
+    Info (332119):    -0.394              -1.616 boton 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -867,29 +867,29 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.201
+Info (332146): Worst-case setup slack is -8.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.201            -242.299 clk_div:nclk|clk25 
-    Info (332119):    -5.963            -209.007 clk 
-    Info (332119):    -5.554             -16.388 boton 
-    Info (332119):    -3.903             -11.467 new_clock:nw|q 
-Info (332146): Worst-case hold slack is 0.245
+    Info (332119):    -8.487            -273.542 clk_div:nclk|clk25 
+    Info (332119):    -6.177            -211.003 clk 
+    Info (332119):    -5.571             -16.024 boton 
+    Info (332119):    -3.969             -22.236 new_clock:nw|q 
+Info (332146): Worst-case hold slack is 0.167
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.245               0.000 clk 
-    Info (332119):     0.285               0.000 boton 
-    Info (332119):     0.328               0.000 clk_div:nclk|clk25 
-    Info (332119):     0.723               0.000 new_clock:nw|q 
+    Info (332119):     0.167               0.000 clk 
+    Info (332119):     0.331               0.000 new_clock:nw|q 
+    Info (332119):     0.336               0.000 boton 
+    Info (332119):     0.503               0.000 clk_div:nclk|clk25 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.888
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.888             -63.500 clk 
-    Info (332119):    -0.394             -35.555 clk_div:nclk|clk25 
-    Info (332119):    -0.394              -1.762 new_clock:nw|q 
-    Info (332119):    -0.394              -1.624 boton 
+    Info (332119):    -2.174             -81.010 clk_div:nclk|clk25 
+    Info (332119):    -0.853             -62.260 clk 
+    Info (332119):    -0.394              -3.170 new_clock:nw|q 
+    Info (332119):    -0.394              -1.614 boton 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -898,66 +898,66 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.783
+Info (332146): Worst-case setup slack is -4.849
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.783            -133.902 clk_div:nclk|clk25 
-    Info (332119):    -3.717             -84.709 clk 
-    Info (332119):    -3.694             -10.714 boton 
-    Info (332119):    -1.752              -5.196 new_clock:nw|q 
-Info (332146): Worst-case hold slack is 0.059
+    Info (332119):    -4.849            -148.603 clk_div:nclk|clk25 
+    Info (332119):    -3.879             -90.517 clk 
+    Info (332119):    -3.653             -10.347 boton 
+    Info (332119):    -1.816             -10.426 new_clock:nw|q 
+Info (332146): Worst-case hold slack is 0.111
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.059               0.000 clk_div:nclk|clk25 
-    Info (332119):     0.141               0.000 boton 
-    Info (332119):     0.182               0.000 clk 
-    Info (332119):     0.305               0.000 new_clock:nw|q 
+    Info (332119):     0.111               0.000 clk_div:nclk|clk25 
+    Info (332119):     0.149               0.000 new_clock:nw|q 
+    Info (332119):     0.157               0.000 boton 
+    Info (332119):     0.184               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.788
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.788             -10.971 clk 
-    Info (332119):    -0.314              -1.139 boton 
-    Info (332119):    -0.029              -0.029 new_clock:nw|q 
-    Info (332119):    -0.023              -0.065 clk_div:nclk|clk25 
+    Info (332119):    -2.174             -46.872 clk_div:nclk|clk25 
+    Info (332119):    -0.741             -10.622 clk 
+    Info (332119):    -0.306              -1.113 boton 
+    Info (332119):     0.048               0.000 new_clock:nw|q 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.683
+Info (332146): Worst-case setup slack is -4.759
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.683            -118.637 clk_div:nclk|clk25 
-    Info (332119):    -3.548             -72.920 clk 
-    Info (332119):    -3.054              -8.821 boton 
-    Info (332119):    -1.741              -5.144 new_clock:nw|q 
-Info (332146): Worst-case hold slack is -0.002
+    Info (332119):    -4.759            -132.819 clk_div:nclk|clk25 
+    Info (332119):    -3.687             -76.676 clk 
+    Info (332119):    -3.027              -8.523 boton 
+    Info (332119):    -1.766             -10.107 new_clock:nw|q 
+Info (332146): Worst-case hold slack is 0.069
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.002              -0.002 clk_div:nclk|clk25 
-    Info (332119):     0.147               0.000 clk 
-    Info (332119):     0.148               0.000 boton 
-    Info (332119):     0.278               0.000 new_clock:nw|q 
+    Info (332119):     0.069               0.000 clk 
+    Info (332119):     0.075               0.000 clk_div:nclk|clk25 
+    Info (332119):     0.124               0.000 new_clock:nw|q 
+    Info (332119):     0.163               0.000 boton 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.743
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.743             -10.983 clk 
-    Info (332119):    -0.314              -1.115 boton 
-    Info (332119):     0.010               0.000 new_clock:nw|q 
-    Info (332119):     0.013               0.000 clk_div:nclk|clk25 
+    Info (332119):    -2.174             -46.492 clk_div:nclk|clk25 
+    Info (332119):    -0.706             -10.818 clk 
+    Info (332119):    -0.301              -1.079 boton 
+    Info (332119):     0.073               0.000 new_clock:nw|q 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5168 megabytes
-    Info: Processing ended: Wed May 01 00:19:43 2019
+    Info: Peak virtual memory: 5193 megabytes
+    Info: Processing ended: Wed May 01 01:48:22 2019
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 

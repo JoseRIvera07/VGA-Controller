@@ -22,6 +22,11 @@ begin
 				winTemp <= 0;
 		end
 	end
+	else if(step==4'b0000)
+	begin
+			finishTemp <= 0;
+			winTemp <= 0;
+	end
 	else 
 	begin 
 		finish<=finishTemp;

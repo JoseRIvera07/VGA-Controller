@@ -18,7 +18,7 @@ always_ff @(posedge clk, posedge rst)
 		begin
 			if(step==4'b0010)
 			begin
-				if(seconds==2'b11) begin
+				if(seconds==2'b10) begin
 						seconds = 2'b01;
 						doneTemp <= 1;
 				end

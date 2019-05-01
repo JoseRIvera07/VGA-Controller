@@ -1,0 +1,25 @@
+module msg(
+	input clk,
+	input [3:0] step,
+	input [2:0] cuadrante,
+	input [9:0] pixel_x,pixel_y,
+	output enable,
+	output logic [4:0] sprite
+);
+
+
+always @(posedge clk)
+begin
+	if(step==4'b1000)
+	begin
+		if(pixel_x>=266 && pixel_x < 330 && pixel_y>= 120 && pixel_y < 184)
+		begin
+			sprite <= RAM[pixel_y-120][pixel_x-266];
+			enable <= 1;
+		end
+		else begin
+			enable <= 0;
+		end
+	end
+end
+endmodule

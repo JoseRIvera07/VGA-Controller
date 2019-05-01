@@ -1,5 +1,5 @@
 module FSM (
-	input clk,rst,start,select,win,randReady,done,finish,
+	input clk,rst,start,select,win,randReady,done,done2,finish,
 	output [3:0] step
 );
 logic [3:0] next_state;
@@ -47,7 +47,7 @@ always_comb begin
 	end
 	4'b1000:
 	begin
-		if(finish) next_state = 4'b0000;
+		if(done2) next_state = 4'b0000;
 		else next_state = 4'b1000;
 	end
 	default: next_state = 4'b0000;

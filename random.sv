@@ -53,6 +53,7 @@ always_ff @(posedge clk, posedge rst)
 			begin
 				randnum <= randnumTemp;
 				randReady <= 0;
+				//cnt = 0;
 			end
 		end
 		 randnum <= randnumTemp;

@@ -3,42 +3,42 @@ clk => clk.IN4
 boton => counter:ctn.clk
 start => start.IN1
 select => select.IN1
-oVGA_R[0] <= VGA_Controller:controller.oVGA_R[0]
-oVGA_R[1] <= VGA_Controller:controller.oVGA_R[1]
-oVGA_R[2] <= VGA_Controller:controller.oVGA_R[2]
-oVGA_R[3] <= VGA_Controller:controller.oVGA_R[3]
-oVGA_R[4] <= VGA_Controller:controller.oVGA_R[4]
-oVGA_R[5] <= VGA_Controller:controller.oVGA_R[5]
-oVGA_R[6] <= VGA_Controller:controller.oVGA_R[6]
-oVGA_R[7] <= VGA_Controller:controller.oVGA_R[7]
-oVGA_G[0] <= VGA_Controller:controller.oVGA_G[0]
-oVGA_G[1] <= VGA_Controller:controller.oVGA_G[1]
-oVGA_G[2] <= VGA_Controller:controller.oVGA_G[2]
-oVGA_G[3] <= VGA_Controller:controller.oVGA_G[3]
-oVGA_G[4] <= VGA_Controller:controller.oVGA_G[4]
-oVGA_G[5] <= VGA_Controller:controller.oVGA_G[5]
-oVGA_G[6] <= VGA_Controller:controller.oVGA_G[6]
-oVGA_G[7] <= VGA_Controller:controller.oVGA_G[7]
-oVGA_B[0] <= VGA_Controller:controller.oVGA_B[0]
-oVGA_B[1] <= VGA_Controller:controller.oVGA_B[1]
-oVGA_B[2] <= VGA_Controller:controller.oVGA_B[2]
-oVGA_B[3] <= VGA_Controller:controller.oVGA_B[3]
-oVGA_B[4] <= VGA_Controller:controller.oVGA_B[4]
-oVGA_B[5] <= VGA_Controller:controller.oVGA_B[5]
-oVGA_B[6] <= VGA_Controller:controller.oVGA_B[6]
-oVGA_B[7] <= VGA_Controller:controller.oVGA_B[7]
-oVGA_H_SYNC <= VGA_Controller:controller.oVGA_H_SYNC
-oVGA_V_SYNC <= VGA_Controller:controller.oVGA_V_SYNC
-oVGA_SYNC <= VGA_Controller:controller.oVGA_SYNC
-oVGA_BLANK <= VGA_Controller:controller.oVGA_BLANK
-oVGA_CLK <= VGA_Controller:controller.oVGA_CLK
-seveSeg[0] <= decodificador:deco.port0
-seveSeg[1] <= decodificador:deco.port0
-seveSeg[2] <= decodificador:deco.port0
-seveSeg[3] <= decodificador:deco.port0
-seveSeg[4] <= decodificador:deco.port0
-seveSeg[5] <= decodificador:deco.port0
-seveSeg[6] <= decodificador:deco.port0
+oVGA_R[0] << VGA_Controller:controller.oVGA_R[0]
+oVGA_R[1] << VGA_Controller:controller.oVGA_R[1]
+oVGA_R[2] << VGA_Controller:controller.oVGA_R[2]
+oVGA_R[3] << VGA_Controller:controller.oVGA_R[3]
+oVGA_R[4] << VGA_Controller:controller.oVGA_R[4]
+oVGA_R[5] << VGA_Controller:controller.oVGA_R[5]
+oVGA_R[6] << VGA_Controller:controller.oVGA_R[6]
+oVGA_R[7] << VGA_Controller:controller.oVGA_R[7]
+oVGA_G[0] << VGA_Controller:controller.oVGA_G[0]
+oVGA_G[1] << VGA_Controller:controller.oVGA_G[1]
+oVGA_G[2] << VGA_Controller:controller.oVGA_G[2]
+oVGA_G[3] << VGA_Controller:controller.oVGA_G[3]
+oVGA_G[4] << VGA_Controller:controller.oVGA_G[4]
+oVGA_G[5] << VGA_Controller:controller.oVGA_G[5]
+oVGA_G[6] << VGA_Controller:controller.oVGA_G[6]
+oVGA_G[7] << VGA_Controller:controller.oVGA_G[7]
+oVGA_B[0] << VGA_Controller:controller.oVGA_B[0]
+oVGA_B[1] << VGA_Controller:controller.oVGA_B[1]
+oVGA_B[2] << VGA_Controller:controller.oVGA_B[2]
+oVGA_B[3] << VGA_Controller:controller.oVGA_B[3]
+oVGA_B[4] << VGA_Controller:controller.oVGA_B[4]
+oVGA_B[5] << VGA_Controller:controller.oVGA_B[5]
+oVGA_B[6] << VGA_Controller:controller.oVGA_B[6]
+oVGA_B[7] << VGA_Controller:controller.oVGA_B[7]
+oVGA_H_SYNC << VGA_Controller:controller.oVGA_H_SYNC
+oVGA_V_SYNC << VGA_Controller:controller.oVGA_V_SYNC
+oVGA_SYNC << VGA_Controller:controller.oVGA_SYNC
+oVGA_BLANK << VGA_Controller:controller.oVGA_BLANK
+oVGA_CLK << VGA_Controller:controller.oVGA_CLK
+seveSeg[0] << decodificador:deco.port0
+seveSeg[1] << decodificador:deco.port0
+seveSeg[2] << decodificador:deco.port0
+seveSeg[3] << decodificador:deco.port0
+seveSeg[4] << decodificador:deco.port0
+seveSeg[5] << decodificador:deco.port0
+seveSeg[6] << decodificador:deco.port0
 
 
 |top_test|antirrebote:ant
@@ -205,11 +205,11 @@ done => always1.IN1
 done => always1.IN1
 done => always1.IN1
 done => always1.IN1
+done2 => Selector0.IN3
+done2 => Selector5.IN2
 finish => next_state.OUTPUTSELECT
 finish => next_state.OUTPUTSELECT
-finish => Selector0.IN3
 finish => Selector0.IN4
-finish => Selector5.IN2
 step[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 step[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 step[2] <= step[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -237,6 +237,12 @@ seleccion[2] <= seleccion.DB_MAX_OUTPUT_PORT_TYPE
 
 |top_test|mux_sprite_state:mxs
 sprite_on => mux_out.DATAA
+selector => Decoder0.IN0
+mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_test|mux_msg_state:msg
+msg_on => mux_out.DATAA
 selector => Decoder0.IN0
 mux_out <= mux_out.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -702,6 +708,20 @@ step[3] => Equal0.IN1
 done <= doneTemp.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top_test|cronometer2:crn2
+clk => doneTemp.CLK
+clk => seconds[0].CLK
+clk => seconds[1].CLK
+rst => doneTemp.ACLR
+rst => seconds[0].ACLR
+rst => seconds[1].ACLR
+step[0] => Equal0.IN3
+step[1] => Equal0.IN2
+step[2] => Equal0.IN1
+step[3] => Equal0.IN0
+done2 <= doneTemp.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top_test|hlineGenerator:generator
 clk => hline_on~reg0.CLK
 clk => hline[0]~reg0.CLK
@@ -1071,6 +1091,108 @@ sprite[3] <= sprite[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sprite[4] <= sprite[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top_test|msg:ms
+clk => enable~reg0.CLK
+clk => msg[0]~reg0.CLK
+clk => msg[1]~reg0.CLK
+step[0] => Equal0.IN3
+step[1] => Equal0.IN2
+step[2] => Equal0.IN1
+step[3] => Equal0.IN0
+pixel_x[0] => LessThan0.IN20
+pixel_x[0] => LessThan1.IN20
+pixel_x[0] => RAM.RADDR
+pixel_x[1] => LessThan0.IN19
+pixel_x[1] => LessThan1.IN19
+pixel_x[1] => Add1.IN18
+pixel_x[2] => LessThan0.IN18
+pixel_x[2] => LessThan1.IN18
+pixel_x[2] => Add1.IN17
+pixel_x[3] => LessThan0.IN17
+pixel_x[3] => LessThan1.IN17
+pixel_x[3] => Add1.IN16
+pixel_x[4] => LessThan0.IN16
+pixel_x[4] => LessThan1.IN16
+pixel_x[4] => Add1.IN15
+pixel_x[5] => LessThan0.IN15
+pixel_x[5] => LessThan1.IN15
+pixel_x[5] => Add1.IN14
+pixel_x[6] => LessThan0.IN14
+pixel_x[6] => LessThan1.IN14
+pixel_x[6] => Add1.IN13
+pixel_x[7] => LessThan0.IN13
+pixel_x[7] => LessThan1.IN13
+pixel_x[7] => Add1.IN12
+pixel_x[8] => LessThan0.IN12
+pixel_x[8] => LessThan1.IN12
+pixel_x[8] => Add1.IN11
+pixel_x[9] => LessThan0.IN11
+pixel_x[9] => LessThan1.IN11
+pixel_x[9] => Add1.IN10
+pixel_y[0] => LessThan2.IN20
+pixel_y[0] => LessThan3.IN20
+pixel_y[0] => Add2.IN64
+pixel_y[1] => LessThan2.IN19
+pixel_y[1] => LessThan3.IN19
+pixel_y[1] => Add2.IN63
+pixel_y[2] => LessThan2.IN18
+pixel_y[2] => LessThan3.IN18
+pixel_y[2] => Add2.IN62
+pixel_y[3] => LessThan2.IN17
+pixel_y[3] => LessThan3.IN17
+pixel_y[3] => Add0.IN14
+pixel_y[4] => LessThan2.IN16
+pixel_y[4] => LessThan3.IN16
+pixel_y[4] => Add0.IN13
+pixel_y[5] => LessThan2.IN15
+pixel_y[5] => LessThan3.IN15
+pixel_y[5] => Add0.IN12
+pixel_y[6] => LessThan2.IN14
+pixel_y[6] => LessThan3.IN14
+pixel_y[6] => Add0.IN11
+pixel_y[7] => LessThan2.IN13
+pixel_y[7] => LessThan3.IN13
+pixel_y[7] => Add0.IN10
+pixel_y[8] => LessThan2.IN12
+pixel_y[8] => LessThan3.IN12
+pixel_y[8] => Add0.IN9
+pixel_y[9] => LessThan2.IN11
+pixel_y[9] => LessThan3.IN11
+pixel_y[9] => Add0.IN8
+enable <= enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+msg[0] <= msg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+msg[1] <= msg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_test|mux_RGB_msg:comb_4
+selector[0] => Equal0.IN3
+selector[1] => Equal0.IN2
+mux_out[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[3] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[4] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[5] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[6] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[7] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[8] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[9] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[10] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[11] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[12] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[13] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[14] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[15] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[16] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[17] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[18] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[19] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[20] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[21] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[22] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mux_out[23] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top_test|mux_RGB_spr:mxsc
 selector[0] => Ram0.RADDR
 selector[1] => Ram0.RADDR1
@@ -1109,9 +1231,13 @@ clk => finish~reg0.CLK
 clk => winTemp.CLK
 clk => finishTemp.CLK
 step[0] => Equal0.IN2
+step[0] => Equal2.IN3
 step[1] => Equal0.IN1
+step[1] => Equal2.IN2
 step[2] => Equal0.IN0
+step[2] => Equal2.IN1
 step[3] => Equal0.IN3
+step[3] => Equal2.IN0
 icuadrante[0] => Equal1.IN2
 icuadrante[1] => Equal1.IN1
 icuadrante[2] => Equal1.IN0
