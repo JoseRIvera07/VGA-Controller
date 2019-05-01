@@ -1,0 +1,21 @@
+module selectionCompartor (
+   input clk,
+	logic [2:0] icuadrante,cuadranterandom
+	output finish,win
+);
+
+
+always @(posedge clk)
+begin
+		if(icuadrante==cuadranterandom)
+		begin
+			finish <= 0;
+			win <= 1;
+		end
+	else begin 
+		finish <= 1;
+			win <= 0;
+	end
+
+end
+endmodule

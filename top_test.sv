@@ -17,8 +17,9 @@ logic [9:0] pixel_y;
 logic clk25;
 logic clk1;
 logic rst=0;
-logic win=0;
-logic finish=0;
+logic rstall=0;
+logic win;
+logic finish;
 logic start1;
 logic select1;
 logic randReady;
@@ -38,9 +39,12 @@ logic [2:0] seleccion;
 logic [2:0] icuadrante;
 logic [2:0] cuadranterandom;
 logic [3:0] step;
+logic [4:0] spr_color;
 
 antirrebote ant(clk,start,start1);
 antirrebote ant1(clk,select,select1);
+
+//mux_rst mrst(step,rst);
 
 clk_div nclk(clk,clk25);
 
@@ -58,7 +62,7 @@ mux_sprite_state mxs(sprite_on,done,mux_sprite_out);
 
 mux_RGB dut(hline,vline,spr,0,ocuadrante,seleccion,mux_out);
 
-Comparator comp(clk25,icuadrante,pixel_x,pixel_y,ocuadrante,slc_on);
+Comparator comp(clk25,win,icuadrante,pixel_x,pixel_y,ocuadrante,slc_on);
 
 new_clock nw(clk,rst,clk1);
 
@@ -68,7 +72,11 @@ hlineGenerator generator(clk25,win,pixel_x,pixel_y,hline_on,hline);
 
 vlineGenerator generator2(clk25,win,pixel_x,pixel_y,vline_on,vline);
 
-sprite sp(clk25,step,cuadranterandom,pixel_x,pixel_y,sprite_on,spr);
+sprite sp(clk25,step,cuadranterandom,pixel_x,pixel_y,sprite_on,spr_color);
+
+mux_RGB_spr mxsc(spr_color,spr);
+
+selectionCompartor sc(clk,step,icuadrante,cuadranterandom,finish,win);
 
 VGA_Controller controller(mux_out[23:16],mux_out[15:8],mux_out[7:0],oVGA_R,oVGA_G,oVGA_B,oVGA_H_SYNC,oVGA_V_SYNC,oVGA_SYNC,oVGA_BLANK,oVGA_CLK,clk25,rst,pixel_x,pixel_y);
 endmodule

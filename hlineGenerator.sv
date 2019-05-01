@@ -10,14 +10,18 @@ logic [23:0] color = 24'b111111111111111111111111;
 
 always @(posedge clk)
 begin
+	if(!win)
+	begin
 		if(pixel_y < 277 && pixel_y>=275)
-		begin
-			hline <= 0;
-			hline_on<= 1;
+			begin
+				hline <= 0;
+				hline_on<= 1;
+			end
+		else begin 
+			hline_on<= 0;
 		end
-	else begin 
-		hline_on<= 0;
 	end
-
+	else hline_on<= 0;
+	
 end
 endmodule

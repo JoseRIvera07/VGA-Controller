@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Laboratorio5
-Tue Apr 30 18:24:43 2019
+Wed May 01 00:18:12 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,19 +19,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: VGA_Controller:controller
  13. Port Connectivity Checks: "VGA_Controller:controller"
- 14. Port Connectivity Checks: "vlineGenerator:generator2"
- 15. Port Connectivity Checks: "hlineGenerator:generator"
- 16. Port Connectivity Checks: "cronometer:crn"
- 17. Port Connectivity Checks: "new_clock:nw"
- 18. Port Connectivity Checks: "mux_RGB:dut"
- 19. Port Connectivity Checks: "selector:selectd"
- 20. Port Connectivity Checks: "FSM:fsm"
- 21. Port Connectivity Checks: "random:ran"
- 22. Port Connectivity Checks: "counter:ctn"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+ 14. Port Connectivity Checks: "cronometer:crn"
+ 15. Port Connectivity Checks: "new_clock:nw"
+ 16. Port Connectivity Checks: "mux_RGB:dut"
+ 17. Port Connectivity Checks: "selector:selectd"
+ 18. Port Connectivity Checks: "FSM:fsm"
+ 19. Port Connectivity Checks: "random:ran"
+ 20. Port Connectivity Checks: "counter:ctn"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -57,13 +55,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 30 18:24:43 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed May 01 00:18:12 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Laboratorio5                                ;
 ; Top-level Entity Name           ; top_test                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 147                                         ;
+; Total registers                 ; 157                                         ;
 ; Total pins                      ; 40                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -181,29 +179,31 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-; antirrebote.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/antirrebote.sv      ;         ;
-; decodificador.vhd                ; yes             ; User VHDL File               ; C:/Users/Jose Rivera/Documents/VGA-Controller/decodificador.vhd   ;         ;
-; counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv          ;         ;
-; Comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/Comparator.sv       ;         ;
-; FSM.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/FSM.sv              ;         ;
-; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv   ;         ;
-; clk_div.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/clk_div.sv          ;         ;
-; mux_RGB.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB.sv          ;         ;
-; selector.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/selector.sv         ;         ;
-; hlineGenerator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv   ;         ;
-; vlineGenerator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv   ;         ;
-; top_test.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv         ;         ;
-; random.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv           ;         ;
-; sprite.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv           ;         ;
-; cronometer.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv       ;         ;
-; new_clock.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/new_clock.sv        ;         ;
-; mux_sprite_state.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/mux_sprite_state.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; antirrebote.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/antirrebote.sv        ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File               ; C:/Users/Jose Rivera/Documents/VGA-Controller/decodificador.vhd     ;         ;
+; counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv            ;         ;
+; Comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/Comparator.sv         ;         ;
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/FSM.sv                ;         ;
+; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv     ;         ;
+; clk_div.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/clk_div.sv            ;         ;
+; mux_RGB.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB.sv            ;         ;
+; selector.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/selector.sv           ;         ;
+; hlineGenerator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv     ;         ;
+; vlineGenerator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv     ;         ;
+; top_test.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv           ;         ;
+; random.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv             ;         ;
+; sprite.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv             ;         ;
+; cronometer.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv         ;         ;
+; new_clock.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/new_clock.sv          ;         ;
+; mux_sprite_state.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/mux_sprite_state.sv   ;         ;
+; mux_RGB_spr.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB_spr.sv        ;         ;
+; selectionCompartor.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Jose Rivera/Documents/VGA-Controller/selectionCompartor.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -211,49 +211,53 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 114       ;
+; Estimate of Logic utilization (ALMs needed) ; 223       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 194       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 31        ;
-;     -- 5 input functions                    ; 23        ;
-;     -- 4 input functions                    ; 19        ;
-;     -- <=3 input functions                  ; 121       ;
+; Combinational ALUT usage for logic          ; 350       ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 89        ;
+;     -- 5 input functions                    ; 67        ;
+;     -- 4 input functions                    ; 42        ;
+;     -- <=3 input functions                  ; 148       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 147       ;
+; Dedicated logic registers                   ; 157       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 40        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 88        ;
-; Total fan-out                               ; 1134      ;
-; Average fan-out                             ; 2.69      ;
+; Maximum fan-out                             ; 93        ;
+; Total fan-out                               ; 1923      ;
+; Average fan-out                             ; 3.28      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name    ; Library Name ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
-; |top_test                      ; 194 (0)             ; 147 (0)                   ; 0                 ; 0          ; 40   ; 0            ; |top_test                           ; top_test       ; work         ;
-;    |Comparator:comp|           ; 20 (20)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|Comparator:comp           ; Comparator     ; work         ;
-;    |FSM:fsm|                   ; 6 (6)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|FSM:fsm                   ; FSM            ; work         ;
-;    |VGA_Controller:controller| ; 43 (43)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|VGA_Controller:controller ; VGA_Controller ; work         ;
-;    |antirrebote:ant1|          ; 24 (24)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|antirrebote:ant1          ; antirrebote    ; work         ;
-;    |antirrebote:ant|           ; 24 (24)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|antirrebote:ant           ; antirrebote    ; work         ;
-;    |clk_div:nclk|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|clk_div:nclk              ; clk_div        ; work         ;
-;    |counter:ctn|               ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|counter:ctn               ; counter        ; work         ;
-;    |cronometer:crn|            ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|cronometer:crn            ; cronometer     ; work         ;
-;    |decodificador:deco|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|decodificador:deco        ; decodificador  ; work         ;
-;    |hlineGenerator:generator|  ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|hlineGenerator:generator  ; hlineGenerator ; work         ;
-;    |new_clock:nw|              ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|new_clock:nw              ; new_clock      ; work         ;
-;    |random:ran|                ; 16 (16)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|random:ran                ; random         ; work         ;
-;    |sprite:sp|                 ; 11 (11)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|sprite:sp                 ; sprite         ; work         ;
-;    |vlineGenerator:generator2| ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|vlineGenerator:generator2 ; vlineGenerator ; work         ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name        ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+--------------------+--------------+
+; |top_test                      ; 350 (0)             ; 157 (0)                   ; 0                 ; 0          ; 40   ; 0            ; |top_test                           ; top_test           ; work         ;
+;    |Comparator:comp|           ; 16 (16)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|Comparator:comp           ; Comparator         ; work         ;
+;    |FSM:fsm|                   ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|FSM:fsm                   ; FSM                ; work         ;
+;    |VGA_Controller:controller| ; 53 (53)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|VGA_Controller:controller ; VGA_Controller     ; work         ;
+;    |antirrebote:ant1|          ; 24 (24)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|antirrebote:ant1          ; antirrebote        ; work         ;
+;    |antirrebote:ant|           ; 24 (24)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|antirrebote:ant           ; antirrebote        ; work         ;
+;    |clk_div:nclk|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|clk_div:nclk              ; clk_div            ; work         ;
+;    |counter:ctn|               ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|counter:ctn               ; counter            ; work         ;
+;    |cronometer:crn|            ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|cronometer:crn            ; cronometer         ; work         ;
+;    |decodificador:deco|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|decodificador:deco        ; decodificador      ; work         ;
+;    |hlineGenerator:generator|  ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|hlineGenerator:generator  ; hlineGenerator     ; work         ;
+;    |mux_RGB_spr:mxsc|          ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|mux_RGB_spr:mxsc          ; mux_RGB_spr        ; work         ;
+;    |mux_sprite_state:mxs|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|mux_sprite_state:mxs      ; mux_sprite_state   ; work         ;
+;    |new_clock:nw|              ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|new_clock:nw              ; new_clock          ; work         ;
+;    |random:ran|                ; 16 (16)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|random:ran                ; random             ; work         ;
+;    |selectionCompartor:sc|     ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|selectionCompartor:sc     ; selectionCompartor ; work         ;
+;    |selector:selectd|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|selector:selectd          ; selector           ; work         ;
+;    |sprite:sp|                 ; 133 (133)           ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|sprite:sp                 ; sprite             ; work         ;
+;    |vlineGenerator:generator2| ; 4 (4)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|vlineGenerator:generator2 ; vlineGenerator     ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -280,19 +284,16 @@ Encoding Type:  One-Hot
 ; VGA_Controller:controller|oVGA_SYNC                ; Stuck at GND due to stuck port data_in     ;
 ; vlineGenerator:generator2|vline[0..23]             ; Stuck at GND due to stuck port data_in     ;
 ; hlineGenerator:generator|hline[0..23]              ; Stuck at GND due to stuck port data_in     ;
-; sprite:sp|sprite[1..23]                            ; Merged with sprite:sp|sprite[0]            ;
 ; Comparator:comp|ocuadrante[2,4,5,10..13,16,18..22] ; Merged with Comparator:comp|ocuadrante[0]  ;
 ; Comparator:comp|ocuadrante[1,3,6..9,15,17,23]      ; Merged with Comparator:comp|ocuadrante[14] ;
 ; counter:ctn|seconds[2]                             ; Merged with counter:ctn|enable[2]          ;
 ; counter:ctn|seconds[1]                             ; Merged with counter:ctn|enable[1]          ;
 ; counter:ctn|seconds[0]                             ; Merged with counter:ctn|enable[0]          ;
-; sprite:sp|sprite[0]                                ; Stuck at GND due to stuck port data_in     ;
 ; Comparator:comp|ocuadrante[0]                      ; Stuck at GND due to stuck port data_in     ;
 ; Comparator:comp|ocuadrante[14]                     ; Stuck at VCC due to stuck port data_in     ;
 ; FSM:fsm|state~4                                    ; Lost fanout                                ;
 ; FSM:fsm|state~5                                    ; Lost fanout                                ;
-; FSM:fsm|state.1000                                 ; Stuck at GND due to stuck port data_in     ;
-; Total Number of Removed Registers = 103            ;                                            ;
+; Total Number of Removed Registers = 78             ;                                            ;
 +----------------------------------------------------+--------------------------------------------+
 
 
@@ -301,27 +302,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 147   ;
-; Number of registers using Synchronous Clear  ; 84    ;
+; Total registers                              ; 157   ;
+; Number of registers using Synchronous Clear  ; 100   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 53    ;
+; Number of registers using Clock Enable       ; 60    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_test|counter:ctn|enable[0]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_test|random:ran|randnumTemp[2]     ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant|counter[10]   ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant1|counter[10]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_test|selector:selectd|seleccion[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_test|counter:ctn|enable[1]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_test|random:ran|randnumTemp[1]           ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant|counter[15]         ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant1|counter[14]        ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_test|VGA_Controller:controller|oVGA_B[3] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_test|selector:selectd|seleccion[1]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |top_test|sprite:sp|Add0                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -352,24 +355,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------------+
 ; iRST_N ; Input ; Info     ; Stuck at GND              ;
 +--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "vlineGenerator:generator2" ;
-+------+-------+----------+-----------------------------+
-; Port ; Type  ; Severity ; Details                     ;
-+------+-------+----------+-----------------------------+
-; win  ; Input ; Info     ; Stuck at GND                ;
-+------+-------+----------+-----------------------------+
-
-
-+------------------------------------------------------+
-; Port Connectivity Checks: "hlineGenerator:generator" ;
-+------+-------+----------+----------------------------+
-; Port ; Type  ; Severity ; Details                    ;
-+------+-------+----------+----------------------------+
-; win  ; Input ; Info     ; Stuck at GND               ;
-+------+-------+----------+----------------------------+
 
 
 +--------------------------------------------+
@@ -410,15 +395,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Port Connectivity Checks: "FSM:fsm"      ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; rst    ; Input ; Info     ; Stuck at GND ;
-; win    ; Input ; Info     ; Stuck at GND ;
-; finish ; Input ; Info     ; Stuck at GND ;
-+--------+-------+----------+--------------+
++----------------------------------------+
+; Port Connectivity Checks: "FSM:fsm"    ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; rst  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
 
 
 +----------------------------------------+
@@ -444,26 +427,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 147                         ;
-;     ENA               ; 5                           ;
+; arriav_ff             ; 157                         ;
+;     ENA               ; 12                          ;
 ;     ENA SCLR          ; 48                          ;
-;     SCLR              ; 36                          ;
-;     plain             ; 58                          ;
-; arriav_lcell_comb     ; 195                         ;
-;     arith             ; 93                          ;
-;         1 data inputs ; 93                          ;
-;     normal            ; 102                         ;
+;     SCLR              ; 52                          ;
+;     plain             ; 45                          ;
+; arriav_lcell_comb     ; 351                         ;
+;     arith             ; 119                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 111                         ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 5                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 228                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 19                          ;
-;         5 data inputs ; 23                          ;
-;         6 data inputs ; 31                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 41                          ;
+;         5 data inputs ; 62                          ;
+;         6 data inputs ; 89                          ;
 ; boundary_port         ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.35                        ;
+; Max LUT depth         ; 7.90                        ;
+; Average LUT depth     ; 3.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -482,7 +470,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 30 18:24:25 2019
+    Info: Processing started: Wed May 01 00:17:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -525,39 +513,54 @@ Info (12021): Found 1 design units, including 1 entities, in source file new_clo
     Info (12023): Found entity 1: new_clock File: C:/Users/Jose Rivera/Documents/VGA-Controller/new_clock.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_sprite_state.sv
     Info (12023): Found entity 1: mux_sprite_state File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_sprite_state.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_rgb_spr.sv
+    Info (12023): Found entity 1: mux_RGB_spr File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB_spr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_rst.sv
+    Info (12023): Found entity 1: mux_rst File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_rst.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file selectioncompartor.sv
+    Info (12023): Found entity 1: selectionCompartor File: C:/Users/Jose Rivera/Documents/VGA-Controller/selectionCompartor.sv Line: 1
 Info (12127): Elaborating entity "top_test" for the top level hierarchy
-Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:ant" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 42
+Warning (10036): Verilog HDL or VHDL warning at top_test.sv(20): object "rstall" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 20
+Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:ant" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 44
 Warning (10230): Verilog HDL assignment warning at antirrebote.sv(15): truncated value with size 32 to match size of target (20) File: C:/Users/Jose Rivera/Documents/VGA-Controller/antirrebote.sv Line: 15
-Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:nclk" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 45
-Info (12128): Elaborating entity "counter" for hierarchy "counter:ctn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 47
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:nclk" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 49
+Info (12128): Elaborating entity "counter" for hierarchy "counter:ctn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 51
 Warning (10230): Verilog HDL assignment warning at counter.sv(25): truncated value with size 32 to match size of target (3) File: C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv Line: 25
-Info (12128): Elaborating entity "random" for hierarchy "random:ran" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 49
+Info (12128): Elaborating entity "random" for hierarchy "random:ran" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 53
 Warning (10230): Verilog HDL assignment warning at random.sv(27): truncated value with size 32 to match size of target (7) File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 27
 Critical Warning (10237): Verilog HDL warning at random.sv(58): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 58
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:deco" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 51
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 53
-Info (12128): Elaborating entity "selector" for hierarchy "selector:selectd" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 55
-Info (12128): Elaborating entity "mux_sprite_state" for hierarchy "mux_sprite_state:mxs" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 57
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:deco" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 55
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 57
+Info (12128): Elaborating entity "selector" for hierarchy "selector:selectd" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 59
+Info (12128): Elaborating entity "mux_sprite_state" for hierarchy "mux_sprite_state:mxs" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 61
 Warning (10036): Verilog HDL or VHDL warning at mux_sprite_state.sv(6): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_sprite_state.sv Line: 6
-Info (12128): Elaborating entity "mux_RGB" for hierarchy "mux_RGB:dut" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 59
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 61
-Info (12128): Elaborating entity "new_clock" for hierarchy "new_clock:nw" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 63
+Info (12128): Elaborating entity "mux_RGB" for hierarchy "mux_RGB:dut" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 63
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 65
+Info (12128): Elaborating entity "new_clock" for hierarchy "new_clock:nw" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 67
 Warning (10230): Verilog HDL assignment warning at new_clock.sv(23): truncated value with size 32 to match size of target (26) File: C:/Users/Jose Rivera/Documents/VGA-Controller/new_clock.sv Line: 23
-Info (12128): Elaborating entity "cronometer" for hierarchy "cronometer:crn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 65
+Info (12128): Elaborating entity "cronometer" for hierarchy "cronometer:crn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 69
 Warning (10230): Verilog HDL assignment warning at cronometer.sv(26): truncated value with size 32 to match size of target (2) File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv Line: 26
 Critical Warning (10237): Verilog HDL warning at cronometer.sv(32): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv Line: 32
-Info (12128): Elaborating entity "hlineGenerator" for hierarchy "hlineGenerator:generator" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 67
+Info (12128): Elaborating entity "hlineGenerator" for hierarchy "hlineGenerator:generator" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 71
 Warning (10036): Verilog HDL or VHDL warning at hlineGenerator.sv(9): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv Line: 9
-Info (12128): Elaborating entity "vlineGenerator" for hierarchy "vlineGenerator:generator2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 69
+Info (12128): Elaborating entity "vlineGenerator" for hierarchy "vlineGenerator:generator2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 73
 Warning (10036): Verilog HDL or VHDL warning at vlineGenerator.sv(9): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv Line: 9
-Info (12128): Elaborating entity "sprite" for hierarchy "sprite:sp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 71
-Warning (10036): Verilog HDL or VHDL warning at sprite.sv(10): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 10
-Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:controller" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 73
+Info (12128): Elaborating entity "sprite" for hierarchy "sprite:sp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 75
+Warning (10030): Net "RAM.data_a" at sprite.sv(104) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
+Warning (10030): Net "RAM.waddr_a" at sprite.sv(104) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
+Warning (10030): Net "RAM.we_a" at sprite.sv(104) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
+Info (12128): Elaborating entity "mux_RGB_spr" for hierarchy "mux_RGB_spr:mxsc" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 77
+Warning (10272): Verilog HDL Case Statement warning at mux_RGB_spr.sv(28): case item expression covers a value already covered by a previous case item File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB_spr.sv Line: 28
+Info (12128): Elaborating entity "selectionCompartor" for hierarchy "selectionCompartor:sc" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 79
+Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:controller" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 81
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(77): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(80): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 80
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(83): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 83
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(123): truncated value with size 32 to match size of target (10) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 123
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(149): truncated value with size 32 to match size of target (10) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 149
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "mux_RGB_spr:mxsc|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB_spr.sv Line: 8
+    Info (276007): RAM logic "sprite:sp|RAM" is uninferred due to asynchronous read logic File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "oVGA_SYNC" is stuck at GND File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 9
@@ -566,15 +569,15 @@ Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Jose Rivera/Documents/VGA-Controller/output_files/Laboratorio5.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 267 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 411 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 227 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Tue Apr 30 18:24:43 2019
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:41
+    Info (21061): Implemented 371 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Wed May 01 00:18:12 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +------------------------------------------+
