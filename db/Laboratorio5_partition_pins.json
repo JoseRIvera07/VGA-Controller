@@ -148,7 +148,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "select",
+					"name" : "boton",
 					"strict" : false
 				},
 				{
@@ -156,7 +156,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "boton",
+					"name" : "select",
 					"strict" : false
 				}
 			]

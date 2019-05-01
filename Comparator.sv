@@ -22,7 +22,7 @@ begin
 	end
 	else if(icuadrante==3'b010) 
 	begin
-		if(hcount<768 && hcount > 454 && vcount>37 && vcount < 273)
+		if(hcount<777 && hcount > 454 && vcount>37 && vcount < 273)
 		begin
 				ocuadrante <= color;
 				slc_on <= 1;
@@ -40,7 +40,7 @@ begin
 	end
 	else if(icuadrante==3'b100) 
 	begin
-		if(hcount<768 && hcount > 454 && vcount<512 && vcount > 278)
+		if(hcount<777 && hcount > 454 && vcount<512 && vcount > 278)
 		begin
 				ocuadrante <= color;
 				slc_on <= 1;

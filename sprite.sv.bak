@@ -1,0 +1,7 @@
+module sprite(
+	input clk,
+	input step,
+	input [9:0] pixel_x,pixel_y,
+	output sprite_on,
+	output logic [23:0] sprite
+);

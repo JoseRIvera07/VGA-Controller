@@ -30,8 +30,8 @@ always_comb begin
 	end
 	4'b0010:
 	begin
-		if(select) next_state = 4'b0111;
-		else if(done) next_state = 4'b0001;
+		if(select && done) next_state = 4'b0111;
+		else if(done && select==0) next_state = 4'b0001;
 		else next_state = 4'b0010; 
 	end
 	4'b0011:

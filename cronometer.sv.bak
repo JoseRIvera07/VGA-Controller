@@ -1,0 +1,32 @@
+module cronometer (
+	input clk,
+	input rst,
+	input [3:0] step,
+	output  logic  sprite_on
+);
+
+logic [1:0] seconds = 0;
+
+always_ff @(posedge clk, posedge rst) 
+	begin
+		if (rst)
+			begin
+				seconds = 0;
+				sprite_on <= 0;
+			end
+		else
+			if(step==4'b0011)
+			begin
+				if(seconds==2'b11) begin
+						seconds = 2'b001;
+						sprite_on <= 0;
+				end
+				else begin
+					seconds = seconds + 1;
+					sprite_on <=1;
+				end
+			end
+			else sprite_on <= 0;
+	end
+
+endmodule: counter
