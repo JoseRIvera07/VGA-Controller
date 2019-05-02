@@ -81,8 +81,8 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_AA14 -to boton
-set_location_assignment PIN_AC12 -to select
+set_location_assignment PIN_Y16 -to boton
+set_location_assignment PIN_W15 -to select
 set_location_assignment PIN_AB12 -to start
 set_location_assignment PIN_AE26 -to seveSeg[0]
 set_location_assignment PIN_AE27 -to seveSeg[1]
@@ -112,7 +112,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE cronometer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE new_clock.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_sprite_state.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_RGB_spr.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux_rst.sv
 set_global_assignment -name SYSTEMVERILOG_FILE selectionCompartor.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_msg_state.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_RGB_msg.sv

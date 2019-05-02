@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Laboratorio5
-Wed May 01 01:46:48 2019
+Thu May 02 17:35:08 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -24,16 +24,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  16. Parameter Settings for Inferred Entity Instance: msg:ms|altsyncram:RAM_rtl_0
  17. altsyncram Parameter Settings by Entity Instance
  18. Port Connectivity Checks: "VGA_Controller:controller"
- 19. Port Connectivity Checks: "cronometer2:crn2"
- 20. Port Connectivity Checks: "cronometer:crn"
- 21. Port Connectivity Checks: "new_clock:nw"
- 22. Port Connectivity Checks: "FSM:fsm"
- 23. Port Connectivity Checks: "random:ran"
- 24. Port Connectivity Checks: "counter:ctn"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 19. Port Connectivity Checks: "FSM:fsm"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,13 +54,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 01 01:46:48 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 02 17:35:08 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Laboratorio5                                ;
 ; Top-level Entity Name           ; top_test                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 161                                         ;
+; Total registers                 ; 143                                         ;
 ; Total pins                      ; 40                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 8,192                                       ;
@@ -230,16 +225,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 237       ;
+; Estimate of Logic utilization (ALMs needed) ; 243       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 365       ;
-;     -- 7 input functions                    ; 5         ;
-;     -- 6 input functions                    ; 102       ;
+; Combinational ALUT usage for logic          ; 363       ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 116       ;
 ;     -- 5 input functions                    ; 62        ;
-;     -- 4 input functions                    ; 35        ;
-;     -- <=3 input functions                  ; 161       ;
+;     -- 4 input functions                    ; 31        ;
+;     -- <=3 input functions                  ; 150       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 161       ;
+; Dedicated logic registers                   ; 143       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 40        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -248,9 +243,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 93        ;
-; Total fan-out                               ; 2022      ;
-; Average fan-out                             ; 3.33      ;
+; Maximum fan-out                             ; 73        ;
+; Total fan-out                               ; 2033      ;
+; Average fan-out                             ; 3.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -259,11 +254,10 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name        ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+--------------------+--------------+
-; |top_test                                 ; 365 (0)             ; 161 (0)                   ; 8192              ; 0          ; 40   ; 0            ; |top_test                                                            ; top_test           ; work         ;
-;    |Comparator:comp|                      ; 16 (16)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|Comparator:comp                                            ; Comparator         ; work         ;
+; |top_test                                 ; 363 (0)             ; 143 (0)                   ; 8192              ; 0          ; 40   ; 0            ; |top_test                                                            ; top_test           ; work         ;
+;    |Comparator:comp|                      ; 16 (16)             ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|Comparator:comp                                            ; Comparator         ; work         ;
 ;    |FSM:fsm|                              ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|FSM:fsm                                                    ; FSM                ; work         ;
-;    |VGA_Controller:controller|            ; 65 (65)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|VGA_Controller:controller                                  ; VGA_Controller     ; work         ;
-;    |antirrebote:ant1|                     ; 24 (24)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|antirrebote:ant1                                           ; antirrebote        ; work         ;
+;    |VGA_Controller:controller|            ; 75 (75)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|VGA_Controller:controller                                  ; VGA_Controller     ; work         ;
 ;    |antirrebote:ant|                      ; 24 (24)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|antirrebote:ant                                            ; antirrebote        ; work         ;
 ;    |clk_div:nclk|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|clk_div:nclk                                               ; clk_div            ; work         ;
 ;    |counter:ctn|                          ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|counter:ctn                                                ; counter            ; work         ;
@@ -274,14 +268,14 @@ refer to the applicable agreement for further details.
 ;    |msg:ms|                               ; 22 (22)             ; 1 (1)                     ; 8192              ; 0          ; 0    ; 0            ; |top_test|msg:ms                                                     ; msg                ; work         ;
 ;       |altsyncram:RAM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |top_test|msg:ms|altsyncram:RAM_rtl_0                                ; altsyncram         ; work         ;
 ;          |altsyncram_5rd1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |top_test|msg:ms|altsyncram:RAM_rtl_0|altsyncram_5rd1:auto_generated ; altsyncram_5rd1    ; work         ;
-;    |mux_RGB:dut|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|mux_RGB:dut                                                ; mux_RGB            ; work         ;
+;    |mux_RGB:dut|                          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|mux_RGB:dut                                                ; mux_RGB            ; work         ;
 ;    |mux_RGB_spr:mxsc|                     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|mux_RGB_spr:mxsc                                           ; mux_RGB_spr        ; work         ;
 ;    |new_clock:nw|                         ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|new_clock:nw                                               ; new_clock          ; work         ;
-;    |random:ran|                           ; 16 (16)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|random:ran                                                 ; random             ; work         ;
-;    |selectionCompartor:sc|                ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|selectionCompartor:sc                                      ; selectionCompartor ; work         ;
-;    |selector:selectd|                     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|selector:selectd                                           ; selector           ; work         ;
-;    |sprite:sp|                            ; 118 (118)           ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|sprite:sp                                                  ; sprite             ; work         ;
-;    |vlineGenerator:generator2|            ; 4 (4)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|vlineGenerator:generator2                                  ; vlineGenerator     ; work         ;
+;    |random:ran|                           ; 17 (17)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top_test|random:ran                                                 ; random             ; work         ;
+;    |selectionCompartor:sc|                ; 5 (5)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|selectionCompartor:sc                                      ; selectionCompartor ; work         ;
+;    |selector:selectd|                     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|selector:selectd                                           ; selector           ; work         ;
+;    |sprite:sp|                            ; 132 (132)           ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|sprite:sp                                                  ; sprite             ; work         ;
+;    |vlineGenerator:generator2|            ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top_test|vlineGenerator:generator2                                  ; vlineGenerator     ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -310,25 +304,27 @@ Encoding Type:  One-Hot
 +------------+------------+------------+------------+------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                              ;
-+----------------------------------------------------+--------------------------------------------+
-; Register name                                      ; Reason for Removal                         ;
-+----------------------------------------------------+--------------------------------------------+
-; VGA_Controller:controller|oVGA_SYNC                ; Stuck at GND due to stuck port data_in     ;
-; vlineGenerator:generator2|vline[0..23]             ; Stuck at GND due to stuck port data_in     ;
-; hlineGenerator:generator|hline[0..23]              ; Stuck at GND due to stuck port data_in     ;
-; Comparator:comp|ocuadrante[2,4,5,10..13,16,18..22] ; Merged with Comparator:comp|ocuadrante[0]  ;
-; Comparator:comp|ocuadrante[1,3,6..9,15,17,23]      ; Merged with Comparator:comp|ocuadrante[14] ;
-; counter:ctn|seconds[2]                             ; Merged with counter:ctn|enable[2]          ;
-; counter:ctn|seconds[1]                             ; Merged with counter:ctn|enable[1]          ;
-; counter:ctn|seconds[0]                             ; Merged with counter:ctn|enable[0]          ;
-; Comparator:comp|ocuadrante[0]                      ; Stuck at GND due to stuck port data_in     ;
-; Comparator:comp|ocuadrante[14]                     ; Stuck at VCC due to stuck port data_in     ;
-; FSM:fsm|state~4                                    ; Lost fanout                                ;
-; FSM:fsm|state~5                                    ; Lost fanout                                ;
-; Total Number of Removed Registers = 78             ;                                            ;
-+----------------------------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++------------------------------------------------+--------------------------------------------+
+; Register name                                  ; Reason for Removal                         ;
++------------------------------------------------+--------------------------------------------+
+; VGA_Controller:controller|oVGA_SYNC            ; Stuck at GND due to stuck port data_in     ;
+; vlineGenerator:generator2|vline[0..23]         ; Stuck at GND due to stuck port data_in     ;
+; hlineGenerator:generator|hline[0..23]          ; Stuck at GND due to stuck port data_in     ;
+; Comparator:comp|ocuadrante[18,20,21]           ; Merged with Comparator:comp|ocuadrante[16] ;
+; Comparator:comp|ocuadrante[23]                 ; Merged with Comparator:comp|ocuadrante[17] ;
+; Comparator:comp|ocuadrante[2,4,5,10..13,19,22] ; Merged with Comparator:comp|ocuadrante[0]  ;
+; Comparator:comp|ocuadrante[1,3,6..9,15]        ; Merged with Comparator:comp|ocuadrante[14] ;
+; counter:ctn|seconds[2]                         ; Merged with counter:ctn|enable[2]          ;
+; counter:ctn|seconds[1]                         ; Merged with counter:ctn|enable[1]          ;
+; counter:ctn|seconds[0]                         ; Merged with counter:ctn|enable[0]          ;
+; Comparator:comp|ocuadrante[0]                  ; Stuck at GND due to stuck port data_in     ;
+; Comparator:comp|ocuadrante[17]                 ; Stuck at VCC due to stuck port data_in     ;
+; FSM:fsm|state~4                                ; Lost fanout                                ;
+; FSM:fsm|state~5                                ; Lost fanout                                ;
+; Total Number of Removed Registers = 76         ;                                            ;
++------------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -336,12 +332,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 161   ;
-; Number of registers using Synchronous Clear  ; 93    ;
+; Total registers                              ; 143   ;
+; Number of registers using Synchronous Clear  ; 77    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 65    ;
+; Number of registers using Clock Enable       ; 49    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -363,10 +359,11 @@ Encoding Type:  One-Hot
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_test|counter:ctn|enable[1]               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_test|selectionCompartor:sc|winTemp       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_test|random:ran|randnumTemp[1]           ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant|counter[16]         ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant1|counter[14]        ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |top_test|VGA_Controller:controller|oVGA_G[7] ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |top_test|VGA_Controller:controller|oVGA_B[5] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |top_test|antirrebote:ant|counter[8]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_test|Comparator:comp|ocuadrante[16]      ;
+; 6:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |top_test|VGA_Controller:controller|oVGA_B[7] ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top_test|VGA_Controller:controller|oVGA_R[3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_test|VGA_Controller:controller|mVGA_G[0] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |top_test|sprite:sp|Add0                      ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_test|selector:selectd|seleccion[2]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
@@ -492,33 +489,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "cronometer2:crn2" ;
-+------+-------+----------+--------------------+
-; Port ; Type  ; Severity ; Details            ;
-+------+-------+----------+--------------------+
-; rst  ; Input ; Info     ; Stuck at GND       ;
-+------+-------+----------+--------------------+
-
-
-+--------------------------------------------+
-; Port Connectivity Checks: "cronometer:crn" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; rst  ; Input ; Info     ; Stuck at GND     ;
-+------+-------+----------+------------------+
-
-
-+------------------------------------------+
-; Port Connectivity Checks: "new_clock:nw" ;
-+------+-------+----------+----------------+
-; Port ; Type  ; Severity ; Details        ;
-+------+-------+----------+----------------+
-; rst  ; Input ; Info     ; Stuck at GND   ;
-+------+-------+----------+----------------+
-
-
 +----------------------------------------+
 ; Port Connectivity Checks: "FSM:fsm"    ;
 +------+-------+----------+--------------+
@@ -528,52 +498,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "random:ran" ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; rst  ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
-
-
-+-----------------------------------------+
-; Port Connectivity Checks: "counter:ctn" ;
-+------+-------+----------+---------------+
-; Port ; Type  ; Severity ; Details       ;
-+------+-------+----------+---------------+
-; rst  ; Input ; Info     ; Stuck at GND  ;
-+------+-------+----------+---------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 161                         ;
-;     ENA               ; 17                          ;
-;     ENA SCLR          ; 48                          ;
-;     SCLR              ; 45                          ;
-;     plain             ; 51                          ;
-; arriav_lcell_comb     ; 366                         ;
-;     arith             ; 125                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 111                         ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 1                           ;
+; arriav_ff             ; 143                         ;
+;     CLR               ; 11                          ;
+;     CLR SCLR          ; 26                          ;
+;     ENA               ; 14                          ;
+;     ENA CLR           ; 6                           ;
+;     ENA SCLR          ; 29                          ;
+;     SCLR              ; 22                          ;
+;     plain             ; 35                          ;
+; arriav_lcell_comb     ; 364                         ;
+;     arith             ; 114                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 99                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 2                           ;
-;         5 data inputs ; 5                           ;
-;     extend            ; 5                           ;
-;         7 data inputs ; 5                           ;
-;     normal            ; 236                         ;
+;         5 data inputs ; 6                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 246                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 57                          ;
-;         6 data inputs ; 102                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 56                          ;
+;         6 data inputs ; 116                         ;
 ; boundary_port         ; 40                          ;
 ; stratixv_ram_block    ; 2                           ;
 ;                       ;                             ;
@@ -587,7 +542,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -597,7 +552,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 01 01:46:29 2019
+    Info: Processing started: Thu May 02 17:34:23 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -654,51 +609,52 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_rgb
     Info (12023): Found entity 1: mux_RGB_msg File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB_msg.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cronometer2.sv
     Info (12023): Found entity 1: cronometer2 File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer2.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at top_test.sv(91): instance has no name File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 91
+Info (12021): Found 1 design units, including 1 entities, in source file cronometer3.sv
+    Info (12023): Found entity 1: cronometer3 File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer3.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at top_test.sv(90): instance has no name File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 90
 Info (12127): Elaborating entity "top_test" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_test.sv(20): object "rstall" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 20
-Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:ant" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 53
+Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:ant" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 52
 Warning (10230): Verilog HDL assignment warning at antirrebote.sv(15): truncated value with size 32 to match size of target (20) File: C:/Users/Jose Rivera/Documents/VGA-Controller/antirrebote.sv Line: 15
-Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:nclk" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 58
-Info (12128): Elaborating entity "counter" for hierarchy "counter:ctn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 60
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:nclk" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 57
+Info (12128): Elaborating entity "counter" for hierarchy "counter:ctn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 59
 Warning (10230): Verilog HDL assignment warning at counter.sv(25): truncated value with size 32 to match size of target (3) File: C:/Users/Jose Rivera/Documents/VGA-Controller/counter.sv Line: 25
-Info (12128): Elaborating entity "random" for hierarchy "random:ran" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 62
+Info (12128): Elaborating entity "random" for hierarchy "random:ran" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 61
 Warning (10230): Verilog HDL assignment warning at random.sv(27): truncated value with size 32 to match size of target (7) File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 27
 Critical Warning (10237): Verilog HDL warning at random.sv(59): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Jose Rivera/Documents/VGA-Controller/random.sv Line: 59
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:deco" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 64
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 66
-Info (12128): Elaborating entity "selector" for hierarchy "selector:selectd" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 68
-Info (12128): Elaborating entity "mux_sprite_state" for hierarchy "mux_sprite_state:mxs" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 70
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:deco" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 63
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 65
+Info (12128): Elaborating entity "selector" for hierarchy "selector:selectd" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 67
+Info (12128): Elaborating entity "mux_sprite_state" for hierarchy "mux_sprite_state:mxs" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 69
 Warning (10036): Verilog HDL or VHDL warning at mux_sprite_state.sv(6): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_sprite_state.sv Line: 6
-Info (12128): Elaborating entity "mux_msg_state" for hierarchy "mux_msg_state:msg" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 72
+Info (12128): Elaborating entity "mux_msg_state" for hierarchy "mux_msg_state:msg" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 71
 Warning (10036): Verilog HDL or VHDL warning at mux_msg_state.sv(6): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_msg_state.sv Line: 6
-Info (12128): Elaborating entity "mux_RGB" for hierarchy "mux_RGB:dut" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 74
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 76
-Info (12128): Elaborating entity "new_clock" for hierarchy "new_clock:nw" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 78
+Info (12128): Elaborating entity "mux_RGB" for hierarchy "mux_RGB:dut" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 73
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 75
+Info (12128): Elaborating entity "new_clock" for hierarchy "new_clock:nw" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at new_clock.sv(23): truncated value with size 32 to match size of target (26) File: C:/Users/Jose Rivera/Documents/VGA-Controller/new_clock.sv Line: 23
-Info (12128): Elaborating entity "cronometer" for hierarchy "cronometer:crn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 80
+Info (12128): Elaborating entity "cronometer" for hierarchy "cronometer:crn" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 79
 Warning (10230): Verilog HDL assignment warning at cronometer.sv(26): truncated value with size 32 to match size of target (2) File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv Line: 26
 Critical Warning (10237): Verilog HDL warning at cronometer.sv(32): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv Line: 32
-Info (12128): Elaborating entity "cronometer2" for hierarchy "cronometer2:crn2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 81
+Info (12128): Elaborating entity "cronometer2" for hierarchy "cronometer2:crn2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 80
 Warning (10230): Verilog HDL assignment warning at cronometer2.sv(26): truncated value with size 32 to match size of target (2) File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer2.sv Line: 26
 Critical Warning (10237): Verilog HDL warning at cronometer2.sv(32): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer2.sv Line: 32
-Info (12128): Elaborating entity "hlineGenerator" for hierarchy "hlineGenerator:generator" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 83
+Info (12128): Elaborating entity "hlineGenerator" for hierarchy "hlineGenerator:generator" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 82
 Warning (10036): Verilog HDL or VHDL warning at hlineGenerator.sv(9): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/hlineGenerator.sv Line: 9
-Info (12128): Elaborating entity "vlineGenerator" for hierarchy "vlineGenerator:generator2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 85
+Info (12128): Elaborating entity "vlineGenerator" for hierarchy "vlineGenerator:generator2" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 84
 Warning (10036): Verilog HDL or VHDL warning at vlineGenerator.sv(9): object "color" assigned a value but never read File: C:/Users/Jose Rivera/Documents/VGA-Controller/vlineGenerator.sv Line: 9
-Info (12128): Elaborating entity "sprite" for hierarchy "sprite:sp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 87
+Info (12128): Elaborating entity "sprite" for hierarchy "sprite:sp" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 86
 Warning (10030): Net "RAM.data_a" at sprite.sv(104) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
 Warning (10030): Net "RAM.waddr_a" at sprite.sv(104) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
 Warning (10030): Net "RAM.we_a" at sprite.sv(104) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/sprite.sv Line: 104
-Info (12128): Elaborating entity "msg" for hierarchy "msg:ms" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 89
+Info (12128): Elaborating entity "msg" for hierarchy "msg:ms" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 88
 Warning (10030): Net "RAM.data_a" at msg.sv(83) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/msg.sv Line: 83
 Warning (10030): Net "RAM.waddr_a" at msg.sv(83) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/msg.sv Line: 83
 Warning (10030): Net "RAM.we_a" at msg.sv(83) has no driver or initial value, using a default initial value '0' File: C:/Users/Jose Rivera/Documents/VGA-Controller/msg.sv Line: 83
-Info (12128): Elaborating entity "mux_RGB_msg" for hierarchy "mux_RGB_msg:comb_4" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 91
-Info (12128): Elaborating entity "mux_RGB_spr" for hierarchy "mux_RGB_spr:mxsc" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 93
+Info (12128): Elaborating entity "mux_RGB_msg" for hierarchy "mux_RGB_msg:comb_5" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 90
+Info (12128): Elaborating entity "mux_RGB_spr" for hierarchy "mux_RGB_spr:mxsc" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 92
 Warning (10272): Verilog HDL Case Statement warning at mux_RGB_spr.sv(28): case item expression covers a value already covered by a previous case item File: C:/Users/Jose Rivera/Documents/VGA-Controller/mux_RGB_spr.sv Line: 28
-Info (12128): Elaborating entity "selectionCompartor" for hierarchy "selectionCompartor:sc" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 95
-Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:controller" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 97
+Info (12128): Elaborating entity "selectionCompartor" for hierarchy "selectionCompartor:sc" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 94
+Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:controller" File: C:/Users/Jose Rivera/Documents/VGA-Controller/top_test.sv Line: 96
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(77): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(80): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 80
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(83): truncated value with size 32 to match size of target (8) File: C:/Users/Jose Rivera/Documents/VGA-Controller/VGA_Controller.sv Line: 83
@@ -740,16 +696,16 @@ Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Jose Rivera/Documents/VGA-Controller/output_files/Laboratorio5.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 427 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 425 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 385 logic cells
+    Info (21061): Implemented 383 logic cells
     Info (21064): Implemented 2 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4901 megabytes
-    Info: Processing ended: Wed May 01 01:46:48 2019
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4911 megabytes
+    Info: Processing ended: Thu May 02 17:35:08 2019
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:46
 
 
 +------------------------------------------+

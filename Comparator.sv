@@ -8,7 +8,9 @@ module Comparator(
 );
 						
 
-logic [23:0] color = 24'b100000101100001111001010;
+logic [23:0] color1 = 24'b100000101100001111001010;
+logic [23:0] color2 = 24'b101101110000000000000000;
+
 
 always @(posedge clk)
 begin
@@ -17,7 +19,7 @@ if(!win)begin
 		begin
 			if(hcount>140 && hcount < 449 && vcount>37 && vcount < 273) 
 			begin
-					ocuadrante <= color;
+					ocuadrante <= color1;
 					slc_on <= 1;
 			end
 				else slc_on <= 0;
@@ -26,7 +28,7 @@ if(!win)begin
 		begin
 			if(hcount<777 && hcount > 454 && vcount>37 && vcount < 273)
 			begin
-					ocuadrante <= color;
+					ocuadrante <= color2;
 					slc_on <= 1;
 			end
 				else slc_on <= 0;
@@ -35,7 +37,7 @@ if(!win)begin
 		begin
 			if(hcount>140 && hcount < 449 && vcount<512 &&vcount > 278)
 			begin
-					ocuadrante <= color;
+					ocuadrante <= color2;
 					slc_on <= 1;
 			end
 				else slc_on <= 0;
@@ -44,7 +46,7 @@ if(!win)begin
 		begin
 			if(hcount<777 && hcount > 454 && vcount<512 && vcount > 278)
 			begin
-					ocuadrante <= color;
+					ocuadrante <= color1;
 					slc_on <= 1;
 			end
 				else slc_on <= 0;

@@ -16,10 +16,9 @@ logic [9:0] pixel_x;
 logic [9:0] pixel_y;
 logic clk25;
 logic clk1;
-logic rst=0;
+logic rst;
 logic rstall=0;
 logic start1;
-logic select1;
 logic hline_on;
 logic vline_on;
 logic sprite_on;
@@ -29,11 +28,6 @@ logic win;
 logic finish;
 logic done;
 logic done2;
-logic win2;
-logic finish2;
-logic done21;
-logic done22;
-logic randReady2;
 logic slc_on;
 logic mux_sprite_out;
 logic mux_msg_out;
@@ -51,9 +45,7 @@ logic [4:0] spr_color;
 logic [1:0] msg_color;
 
 antirrebote ant(clk,start,start1);
-antirrebote ant1(clk,select,select1);
-
-//mux_rst mrst(win,finish,done,done2,selector,win2,finish2,done21,done22);
+//antirrebote ant1(clk,select,select1);
 
 clk_div nclk(clk,clk25);
 
@@ -63,7 +55,7 @@ random ran(clk,rst,step,cuadranterandom,randReady);
 
 decodificador deco(seveSeg,cuadranterandom);
 
-FSM fsm(clk,rst,start1,select1,win,randReady,done,done2,finish,step);
+FSM fsm(clk,rstall,start1,~select,win,randReady,done,done2,finish,step);
 
 selector selectd(hline_on,vline_on,mux_sprite_out,mux_msg_out,slc_on,seleccion);
 
@@ -92,7 +84,7 @@ mux_RGB_msg(msg_color,msgr);
 
 mux_RGB_spr mxsc(spr_color,spr);
 
-selectionCompartor sc(clk,step,icuadrante,cuadranterandom,finish,win);
+selectionCompartor sc(clk,step,icuadrante,cuadranterandom,finish,win,rst);
 
-VGA_Controller controller(mux_out[23:16],mux_out[15:8],mux_out[7:0],oVGA_R,oVGA_G,oVGA_B,oVGA_H_SYNC,oVGA_V_SYNC,oVGA_SYNC,oVGA_BLANK,oVGA_CLK,clk25,rst,pixel_x,pixel_y);
+VGA_Controller controller(mux_out[23:16],mux_out[15:8],mux_out[7:0],oVGA_R,oVGA_G,oVGA_B,oVGA_H_SYNC,oVGA_V_SYNC,oVGA_SYNC,oVGA_BLANK,oVGA_CLK,clk25,rstall,pixel_x,pixel_y);
 endmodule

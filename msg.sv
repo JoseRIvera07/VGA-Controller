@@ -86,9 +86,9 @@ always @(posedge clk)
 begin
 	if(step==4'b1000)
 	begin
-		if(pixel_x>=266 && pixel_x < 330 && pixel_y>= 120 && pixel_y < 184)
+		if(pixel_x>=420 && pixel_x < 484 && pixel_y>= 250 && pixel_y < 314)
 		begin
-			msg <= RAM[pixel_y-120][pixel_x-266];
+			msg <= RAM[pixel_y-250][pixel_x-420];
 			enable <= 1;
 		end
 		else begin

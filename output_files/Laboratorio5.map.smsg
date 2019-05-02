@@ -3,3 +3,4 @@ Warning (10268): Verilog HDL information at random.sv(12): always construct cont
 Warning (10268): Verilog HDL information at cronometer.sv(10): always construct contains both blocking and non-blocking assignments File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer.sv Line: 10
 Warning (10268): Verilog HDL information at new_clock.sv(9): always construct contains both blocking and non-blocking assignments File: C:/Users/Jose Rivera/Documents/VGA-Controller/new_clock.sv Line: 9
 Warning (10268): Verilog HDL information at cronometer2.sv(10): always construct contains both blocking and non-blocking assignments File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer2.sv Line: 10
+Warning (10268): Verilog HDL information at cronometer3.sv(11): always construct contains both blocking and non-blocking assignments File: C:/Users/Jose Rivera/Documents/VGA-Controller/cronometer3.sv Line: 11
